@@ -15,6 +15,12 @@ RUN apt update && \
 # Instala la extensión zip para PHP
 RUN docker-php-ext-install zip
 
+# Configura PHP para aumentar el tamaño de carga de archivos a 6 MB
+RUN { \
+        echo 'upload_max_filesize=6M'; \
+        echo 'post_max_size=6M'; \
+    } > /usr/local/etc/php/conf.d/uploads.ini
+
 # Establece el directorio de trabajo en el directorio raíz de WordPress
 WORKDIR /var/www/html
 

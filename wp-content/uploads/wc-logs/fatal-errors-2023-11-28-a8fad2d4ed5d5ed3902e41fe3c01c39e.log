@@ -1,0 +1,40 @@
+2023-11-28T03:33:06+00:00 CRITICAL Uncaught Error: Interface 'Interop\Container\Exception\NotFoundException' not found in /var/www/html/wp-content/plugins/wp-rocket/vendor/league/container/src/Exception/NotFoundException.php:8
+Stack trace:
+#0 /var/www/html/wp-content/plugins/redux-framework/extendify-sdk/vendor/composer/ClassLoader.php(444): include()
+#1 /var/www/html/wp-content/plugins/redux-framework/extendify-sdk/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/var/www/html/w...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('League\\Containe...')
+#3 /var/www/html/wp-content/plugins/wp-rocket/vendor/league/container/src/Container.php(301): spl_autoload_call('League\\Containe...')
+#4 /var/www/html/wp-content/plugins/wp-rocket/vendor/league/container/src/Container.php(85): League\Container\Container->getFromThisContainer('beacon_subscrib...', Array)
+#5 /var/www/html/wp-content/plugins/wp-rocket/inc/classes/class-plugin.php(167): League\Container\Container->get('beacon_subscrib...')
+#6 /var/www/html/wp- en /var/www/html/wp-content/plugins/wp-rocket/vendor/league/container/src/Exception/NotFoundException.php en la línea 8
+
+2023-11-28T03:33:17+00:00 CRITICAL Uncaught Error: Interface 'Interop\Container\Exception\NotFoundException' not found in /var/www/html/wp-content/plugins/wp-rocket/vendor/league/container/src/Exception/NotFoundException.php:8
+Stack trace:
+#0 /var/www/html/wp-content/plugins/redux-framework/extendify-sdk/vendor/composer/ClassLoader.php(444): include()
+#1 /var/www/html/wp-content/plugins/redux-framework/extendify-sdk/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/var/www/html/w...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('League\\Containe...')
+#3 /var/www/html/wp-content/plugins/wp-rocket/vendor/league/container/src/Container.php(301): spl_autoload_call('League\\Containe...')
+#4 /var/www/html/wp-content/plugins/wp-rocket/vendor/league/container/src/Container.php(85): League\Container\Container->getFromThisContainer('beacon_subscrib...', Array)
+#5 /var/www/html/wp-content/plugins/wp-rocket/inc/classes/class-plugin.php(167): League\Container\Container->get('beacon_subscrib...')
+#6 /var/www/html/wp- en /var/www/html/wp-content/plugins/wp-rocket/vendor/league/container/src/Exception/NotFoundException.php en la línea 8
+
+2023-11-28T03:33:20+00:00 CRITICAL Uncaught Error: Interface 'Interop\Container\Exception\NotFoundException' not found in /var/www/html/wp-content/plugins/wp-rocket/vendor/league/container/src/Exception/NotFoundException.php:8
+Stack trace:
+#0 /var/www/html/wp-content/plugins/redux-framework/extendify-sdk/vendor/composer/ClassLoader.php(444): include()
+#1 /var/www/html/wp-content/plugins/redux-framework/extendify-sdk/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/var/www/html/w...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('League\\Containe...')
+#3 /var/www/html/wp-content/plugins/wp-rocket/vendor/league/container/src/Container.php(301): spl_autoload_call('League\\Containe...')
+#4 /var/www/html/wp-content/plugins/wp-rocket/vendor/league/container/src/Container.php(85): League\Container\Container->getFromThisContainer('buffer_subscrib...', Array)
+#5 /var/www/html/wp-content/plugins/wp-rocket/inc/classes/class-plugin.php(167): League\Container\Container->get('buffer_subscrib...')
+#6 /var/www/html/wp- en /var/www/html/wp-content/plugins/wp-rocket/vendor/league/container/src/Exception/NotFoundException.php en la línea 8
+
+2023-11-28T03:33:34+00:00 CRITICAL Uncaught Error: Interface 'Interop\Container\Exception\NotFoundException' not found in /var/www/html/wp-content/plugins/wp-rocket/vendor/league/container/src/Exception/NotFoundException.php:8
+Stack trace:
+#0 /var/www/html/wp-content/plugins/redux-framework/extendify-sdk/vendor/composer/ClassLoader.php(444): include()
+#1 /var/www/html/wp-content/plugins/redux-framework/extendify-sdk/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/var/www/html/w...')
+#2 [internal function]: Composer\Autoload\ClassLoader->loadClass('League\\Containe...')
+#3 /var/www/html/wp-content/plugins/wp-rocket/vendor/league/container/src/Container.php(301): spl_autoload_call('League\\Containe...')
+#4 /var/www/html/wp-content/plugins/wp-rocket/vendor/league/container/src/Container.php(85): League\Container\Container->getFromThisContainer('beacon_subscrib...', Array)
+#5 /var/www/html/wp-content/plugins/wp-rocket/inc/classes/class-plugin.php(167): League\Container\Container->get('beacon_subscrib...')
+#6 /var/www/html/wp- en /var/www/html/wp-content/plugins/wp-rocket/vendor/league/container/src/Exception/NotFoundException.php en la línea 8
+
