@@ -3,6 +3,7 @@ define('WP_CACHE', true); // Added by WP Rocket
 
 define('WP_HOME', 'http://localhost:8009');
 define('WP_SITEURL', 'http://localhost:8009');
+define('FS_METHOD', 'direct');
 
 
 /** 
