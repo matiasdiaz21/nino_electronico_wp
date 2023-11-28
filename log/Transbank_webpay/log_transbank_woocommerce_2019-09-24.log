@@ -1,0 +1,3 @@
+[2019-09-24 12:48:28] [INFO ] INFO: initTransaction - amount: 21900, sessionId: 5d8a109c77a35, buyOrder: 2583, txDate: 24-09-2019, txTime: 12:48:28
+[2019-09-24 12:48:28] [INFO ] INFO: initTransaction - initResult: {"return":null,"token":"eedb9c4a70530b3a71f8d8155f43ccb0f0d021342586b889d5e6fb85a5c97bec","url":"https:\/\/webpay3g.transbank.cl:443\/webpayserver\/initTransaction"}
+[2019-09-24 12:49:58] [INFO ] INFO: getTransactionResult - tokenWs: eedb9c4a70530b3a71f8d8155f43ccb0f0d021342586b889d5e6fb85a5c97bec

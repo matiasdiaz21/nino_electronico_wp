@@ -1,0 +1,4 @@
+[2021-01-22 18:00:08] [INFO ] INFO: initTransaction - amount: 179000, sessionId: 600b12a882ed4, buyOrder: 7172, txDate: 22-01-2021, txTime: 18:00:08
+[2021-01-22 18:00:08] [INFO ] INFO: createTransaction - initResult: {"token":"12314ed4a626af14f20598992bf20b70dceff93d921ec4a774de8ff19aedbed1","url":"https:\/\/webpay3g.transbank.cl:443\/webpayserver\/initTransaction"}
+[2021-01-22 18:02:16] [INFO ] INFO: initTransaction - amount: 179000, sessionId: 600b13287c6a3, buyOrder: 7172, txDate: 22-01-2021, txTime: 18:02:16
+[2021-01-22 18:02:16] [INFO ] INFO: createTransaction - initResult: {"token":"11319abd21bad8cbb16291e13e3c00e8992a9c4cda7343e63a5e425ffce3eb94","url":"https:\/\/webpay3g.transbank.cl:443\/webpayserver\/initTransaction"}

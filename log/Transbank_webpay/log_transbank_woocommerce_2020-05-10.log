@@ -1,0 +1,6 @@
+[2020-05-10 15:32:23] [INFO ] INFO: initTransaction - amount: 14500, sessionId: 5eb81e8744e47, buyOrder: 3841, txDate: 10-05-2020, txTime: 15:32:23
+[2020-05-10 15:32:23] [INFO ] INFO: initTransaction - initResult: {"error":"Error conectando a Webpay (Verificar que la informaci&oacute;n del certificado sea correcta)","detail":" Commerce code (5970341794170) and commerce signature (597034179417) do not match(306) "}
+[2020-05-10 15:32:23] [ERROR] ERROR: {"error":"Error al crear la transacci\u00f3n","detail":"No se ha creado la transacci\u00f3n para, amount: 14500, sessionId: 5eb81e8744e47, buyOrder: 3841"}
+[2020-05-10 22:51:51] [INFO ] INFO: initTransaction - amount: 33000, sessionId: 5eb8858781605, buyOrder: 3842, txDate: 10-05-2020, txTime: 22:51:51
+[2020-05-10 22:51:51] [INFO ] INFO: initTransaction - initResult: {"error":"Error conectando a Webpay (Verificar que la informaci&oacute;n del certificado sea correcta)","detail":" Commerce code (5970341794170) and commerce signature (597034179417) do not match(306) "}
+[2020-05-10 22:51:51] [ERROR] ERROR: {"error":"Error al crear la transacci\u00f3n","detail":"No se ha creado la transacci\u00f3n para, amount: 33000, sessionId: 5eb8858781605, buyOrder: 3842"}

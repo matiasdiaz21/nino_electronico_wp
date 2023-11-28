@@ -1,0 +1,6 @@
+[2019-06-16 18:35:46] [INFO ] INFO: initTransaction - amount: 108000, sessionId: 5d068c0287ec9, buyOrder: 2165, txDate: 16-06-2019, txTime: 18:35:46
+[2019-06-16 18:35:47] [INFO ] INFO: initTransaction - initResult: {"return":null,"token":"e7490e3ba6beafc646e49bd3f876510d5416265c5dfe971e72541fae59c6e4f8","url":"https:\/\/webpay3g.transbank.cl:443\/webpayserver\/initTransaction"}
+[2019-06-16 18:40:03] [INFO ] INFO: initTransaction - amount: 108000, sessionId: 5d068d031aabd, buyOrder: 2165, txDate: 16-06-2019, txTime: 18:40:03
+[2019-06-16 18:40:03] [INFO ] INFO: initTransaction - initResult: {"return":null,"token":"e303933967b04ccc5254f2955bcfb2564780c6411a68c22b79571465f56c856f","url":"https:\/\/webpay3g.transbank.cl:443\/webpayserver\/initTransaction"}
+[2019-06-16 19:14:54] [INFO ] INFO: initTransaction - amount: 108000, sessionId: 5d06952ed8334, buyOrder: 2165, txDate: 16-06-2019, txTime: 19:14:54
+[2019-06-16 19:14:55] [INFO ] INFO: initTransaction - initResult: {"return":null,"token":"e380957e00561330c54999e6991e6118935488daa208cbecacbdeecd66fd9e10","url":"https:\/\/webpay3g.transbank.cl:443\/webpayserver\/initTransaction"}

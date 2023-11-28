@@ -1,0 +1,4 @@
+[2020-08-22 06:15:40] [INFO ] INFO: initTransaction - amount: 11900, sessionId: 5f40b80ce1cf8, buyOrder: 5552, txDate: 22-08-2020, txTime: 06:15:40
+[2020-08-22 06:15:41] [INFO ] INFO: initTransaction - initResult: {"return":null,"token":"e2bdbc94e7d25094a633b42e31c08bb54cd4525bafd8c26531c6434e37c81f48","url":"https:\/\/webpay3g.transbank.cl:443\/webpayserver\/initTransaction"}
+[2020-08-22 06:25:48] [INFO ] INFO: initTransaction - amount: 11900, sessionId: 5f40ba6c374d8, buyOrder: 5552, txDate: 22-08-2020, txTime: 06:25:48
+[2020-08-22 06:25:48] [INFO ] INFO: initTransaction - initResult: {"return":null,"token":"eb67e3b9c2620dbca507fc8ec6111b5e86b977562fb9655e9d253c080a7f987f","url":"https:\/\/webpay3g.transbank.cl:443\/webpayserver\/initTransaction"}

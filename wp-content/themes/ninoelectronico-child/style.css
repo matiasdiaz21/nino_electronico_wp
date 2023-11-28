@@ -1,0 +1,615 @@
+    /*
+ Theme Name:    Nino Electronico Child
+ Theme URI:     https://
+ Description:   Tema hijo de para El niño Electrónico
+ Author:        Francisco Moroso
+ Author URI:    https://franciscomoroso.com/
+ Template:      ninoelectronico
+ Version:       2.0.9
+ Text Domain:   ninoelectronico-child
+*/
+
+.dropdown-menu-mini-cart .wc-forward{
+    padding: .75em 1.07em !important;
+}
+
+body{
+    background: #fff;
+}
+
+#content{
+    background:url('https://lacasadelninoelectronico.cl/wp-content/themes/ninoelectronico-child/assets/img/ninopattern.png') !important;
+}
+
+.electro-compact .header-v4 .electro-navbar-primary .container, .header-v4 .electro-navbar-primary .container{
+    text-align: center;
+}
+
+.electro-navbar-primary .nav{
+    display:inline-flex;   
+}
+
+.electro-navbar-primary .nav{
+    font-size:1.3em;
+}
+
+.electro-compact .header-v4 .electro-navbar-primary, .header-v4 .electro-navbar-primary{
+    border-top:1px #d6d6d6 solid !important
+}
+
+.header-v1 .masthead{
+    margin-top:0px;
+    padding-top:10px;
+}
+
+.home .header-v1, .header-v1{
+    background:#094a7b;
+}
+
+#new-top-nav{
+    display:flex;
+    color: #094a7b;
+    padding: 3px 0px;
+}
+
+#new-top-nav .container{
+    background: #fff;
+    width:100%;
+    display:flex;
+    justify-content: flex-end;
+}
+
+.navbar-search>.input-group{
+    box-shadow: 0px 20px 16px -18px rgba(250,250,250, 0.3);
+}
+
+.header-icon>a {
+    color: #fff;
+}
+
+.header-icon-counter{
+    background: #fff700 !important;
+    color:#2a282b !important;
+}
+
+.secondary-nav>.menu-item a{
+    color:#fff;
+}
+
+.electro-compact .secondary-nav{
+    display:inline-block;
+    border-top:1px #0091FF solid;
+    margin-left:100px;
+}
+
+.secondary-nav>.menu-item a:hover {
+    color:#0091FF;
+}
+
+.departments-menu-v2 .departments-menu-v2-title+.dropdown-menu li.menu-item-has-children>a::after{
+    color:#0091FF;
+}
+
+.features-list{
+    background: #135b92 !important;
+    color: #fff700;
+}
+
+.electro-compact .features-list .media-left i{
+    color:#fff;
+}
+
+.features-list .feature+.feature, .features-list:not(.electro-v1).columns-1 .feature{
+    border-bottom:1px #0091FF solid !important;
+}
+
+
+.off-canvas-navigation-wrapper .navbar-toggler .navbar-toggler-icon, .off-canvas-navigation-wrapper button .navbar-toggler-icon{
+    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='butt' stroke-miterlimit='0' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+
+#new-top-nav .container i{
+    margin:0px 3px 0px 8px;
+}
+
+.thedate{
+    display: inline-flex;
+    justify-content: flex-start;
+    margin-right: 50px;
+}
+
+.thetext{
+    display:inline-flex;
+    justify-content: flex-end;
+}
+
+.thetext p{
+    margin-bottom:0px;
+}
+
+.brands-carousel .owl-item img.desaturate{
+    -webkit-filter: none;
+    filter:none;
+    opacity:0.8;
+    max-height: 130px;
+}
+
+.footer-bottom-widgets{
+    background: #555;
+    color:#fff;
+}
+
+.footer-bottom-widgets ul>li>a, .footer-bottom-widgets ul>li>a:focus, .footer-bottom-widgets ul>li>a:hover{
+    color:#fff;
+}
+
+.footer-social-icons .social-icons a:focus, .footer-social-icons .social-icons a:hover, .footer-social-icons .social-icons a{
+    color:#3b5998;
+}
+
+.fa-facebook-f:before, .fa-facebook:before{
+    font-size:2em;
+}
+
+.da-block .da-inner, .slider-with-da-block .slider-wrapper{
+    background-color: #fff;
+    border: 2px rgba(19,31,146, 0.6) solid;
+    box-shadow: 0px 0px 10px rgba(19,31,146, 0.3);
+}
+
+.product-outer{
+    background: #fff;
+}
+
+.single-product #primary{
+    background: #fff;
+    padding-top:30px;
+}
+
+iframe.themap{
+    width:100%;
+    height: 300px;
+}
+
+.contact{
+
+}
+
+.contact .row{
+    background: #fff;
+    margin: 60px 0px;
+    padding: 40px 20px;
+}
+
+.contact .row .conterm{
+    margin:20px 0px 50px 0px;
+    font-size: 18px;
+    max-width: 80%;
+    border-bottom: 1px #094a7b solid;
+}
+
+.contact .row i{
+    font-size: 50px;
+    color: #094a7b;
+    margin-right: 20px;
+}
+
+.input-text, input[type=email], input[type=password], input[type=search], input[type=text], input[type=url], textarea{
+    border-color: #094a7b;
+}
+
+.input-text:focus, input[type=email]:focus, input[type=password]:focus, input[type=search]:focus, input[type=text]:focus, input[type=url]:focus, textarea:focus{
+    box-shadow: inset 0 0 0 1px #ddd, 0 0 3px 1px #094a7b;
+    outline: none; 
+}
+
+.electro-price::before{
+    /*content: 'Precio Internet!';
+    font-size: 18px;
+    color: red;
+    margin-right: 10px;*/
+}
+
+.theprice{
+    font-size:16px;
+}
+
+#primary{
+    background: #fff;
+    padding-top: 40px;
+    margin-bottom: 50px;
+}
+
+ul.price li{
+    list-style: none;
+    font-size: 15px;
+    line-height: 25px;
+    text-transform: uppercase;
+
+}
+
+ul.price .precio-tienda{
+    color: #999;
+}
+
+ul.price .precio-internet{
+
+}
+
+ul.price .precio-oferta{
+    color:#d80b0b; 
+}
+
+ul.price .precio-tienda span{
+    margin-left:22px;
+}
+
+ul.price .precio-internet span{
+    margin-left: 6px;
+}
+
+ul.price .precio-oferta span{
+    margin-left:20px;
+    
+}
+
+ul.price span.def-price{
+
+}
+
+.footer-logo{
+    max-width: 150px;
+    margin-top:-15px;
+}
+
+@media (max-width:500px){
+    .thedate{
+        display:none;
+    }
+
+    .contact .row .conterm{
+        max-width:100%
+    }
+
+    .contact .input-text, .contact input[type=email], .contact input[type=password], .contact input[type=search], .contact input[type=text], .contact input[type=url], .contact textarea{
+        width:100%;
+    }
+}
+
+.owl-stage-outer{
+    min-height:80px
+}
+
+ul.product-categories{
+    background:#fff;
+}
+
+.header-logo-link img{
+    max-width: 160px;
+}
+
+.yes-home .secondary-nav-menu{
+    text-align: center;
+    margin-top:-60px;
+}
+
+.yes-home .departments-menu-v2{
+    display:none;
+}
+
+.home .sidebar{
+    margin-top:0px !important;
+}
+
+.nolist li{
+    list-style:none;
+}
+
+article.page{
+    padding: 0px 30px
+}
+
+.woocommerce-variation-price ins .woocommerce-Price-amount.amount, .product-type-variable .price .electro-price ins .woocommerce-Price-amount.amount, .redo, .product-type-variable .price{
+    color:#e00;
+}
+
+.berocket_aapf_widget .berocket_checkbox_color.h5em{
+    max-width:90px;
+}
+
+.hustle-modal-title{
+    background:#094a7b;
+}
+
+.off-canvas-navigation-wrapper .navbar-toggler .navbar-toggler-icon, .off-canvas-navigation-wrapper button .navbar-toggler-icon{
+    background-image:url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='butt' stroke-miterlimit='0' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
+}
+
+#payment .payment_methods li.payment_method_transbank label{
+    height:50px;
+}
+
+#payment .payment_methods li.payment_method_transbank img{
+    width: 200px;
+    max-height: 50px !important;
+}
+
+.sale-perc {
+    background-color: #D9534F;
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    border-radius: .25em;
+
+}
+
+.bubble {
+    left: 0px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 20px;
+    z-index: 9;
+  }
+  
+  .bubble .inside {
+    background-color: #e74c3c;
+    border-radius: 999px;
+    display: table;
+    height: 42px;
+    position: relative;
+    width: 42px;
+    -webkit-border-radius: 999px;
+  }
+  
+  .bubble .inside .inside-text {
+    color: #fff;
+    display: table-cell;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 14px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  #post-1897 .savings{
+      margin-bottom: -100px !important;
+  }
+
+  .section-onsale-product .onsale-product .price-add-to-cart {
+    flex-wrap: wrap;
+}
+
+.section-onsale-product .onsale-product .add-to-cart-wrap {
+    text-align: center;
+    margin: 20px;
+}
+
+.section-onsale-product .onsale-product .add-to-cart-wrap .button, 
+.section-onsale-product .onsale-product .add-to-cart-wrap .added_to_cart {
+    margin: 16px;
+    color: #fff;
+    width: auto;
+    text-indent: 0;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0.5em 1.385em;
+    border-radius: 1.4em;
+    float: none;
+    background-color: #fed700;
+}
+
+.section-onsale-product .onsale-product .add-to-cart-wrap .button:hover, 
+.section-onsale-product .onsale-product .add-to-cart-wrap .added_to_cart:hover,
+.section-onsale-product .onsale-product .add-to-cart-wrap .button:focus, 
+.section-onsale-product .onsale-product .add-to-cart-wrap .added_to_cart:focus {
+    background-color: #333e48;
+}
+
+.section-onsale-product .onsale-product .add-to-cart-wrap .button:before,
+.section-onsale-product .onsale-product .add-to-cart-wrap .add_to_cart_button:before,
+.section-onsale-product .onsale-product .add-to-cart-wrap .added_to_cart:before {
+    padding: 0 !important;
+    background: transparent !important;
+    float: left !important;
+    margin-top: 4px !important;
+    margin-right: 8px !important;
+}
+
+.section-onsale-product .onsale-product .add-to-cart-wrap .added_to_cart:before {
+    content: none;
+}
+
+.menu-item-2159 a{
+    color:#fff700 !important;
+}
+
+.handheld-header-v2 .handheld-header-links>ul a, .mobile-header-v1 .handheld-header-links>ul a, .mobile-header-v2-inner .handheld-header-links>ul a{
+    color:#fff700
+}
+
+.mobile-header-v1 input[type=search]{
+    background: #fff;
+}
+
+.mobile-handheld-department ul.nav li{
+    margin:0px auto;
+}
+
+.wpb_widgetised_column .woocommerce widget_product_categories{
+
+}
+
+.wpb_widgetised_column .widget_product_categories h2{
+    list-style: none !important;
+    font-size: 20px;
+    text-align: center;
+}
+
+.wpb_widgetised_column .widget_product_categories .select2-selection{
+    background: #094a7b !important;
+    
+
+}
+
+.wpb_widgetised_column .widget_product_categories .select2-selection #select2-product_cat-container .select2-selection__placeholder, .wpb_widgetised_column .widget_product_categories .select2-selection .select2-selection__arrow b{
+    color:#fff !important;
+}
+
+.wpb_widgetised_column .widget_product_categories .select2-selection .select2-selection__arrow b{
+    border-color:#fff transparent transparent transparent;
+}
+
+.woocommerce-page #primary{
+    padding-top:0px !important;
+}
+
+.sharethis-inline-share-buttons{
+    margin-bottom:20px !important;
+}
+
+.menu-item-2342 a, .menu-item-2408 a{
+    color:#fff700 !important;
+}
+
+.wpcf7-field-group-add {
+    margin:10px;
+}
+
+.page-id-2786{
+
+}
+
+.page-id-2786 form{
+    text-align: center;
+}
+
+.page-id-2786 form label{
+    width:65%;
+}
+
+.page-id-2786 form span{
+    display:block;
+}
+
+.page-id-2786 form span input{
+    width:100%;
+}
+
+.page-id-2786 form .wpcf7-field-group label{
+    width:40%;
+    margin-right:30px;
+}
+
+.page-id-2786 form input[type=number]{
+    padding: .857em 1.214em;
+    background-color: transparent;
+    color: #818181;
+    line-height: 1.286em;
+    outline: 0;
+    border: 0;
+    -webkit-appearance: none;
+    border-radius: 1.571em;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #094a7b;
+}
+
+.page-id-2786 form .wpcf7-field-group-add {
+    background: #094a7b;
+    color:#fff;
+}
+
+.empresas{
+    background: #094a7b;
+    width:100%;
+    color:#fff;
+}
+
+.empresas a{
+    color:#fff;
+}
+
+.empresas a:focus{
+    color:#fff;
+}
+
+.header-cat-prod header{
+    display:none;
+}
+
+aside{
+    margin-bottom:3.3em;
+}
+
+.product-categories-list-with-header .categories .category a h4{
+    opacity: 1;
+    font-size: 15px;
+    font-weight: 600;
+    color: #009fe3;
+    line-height: 25px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.product-categories-list-with-header .categories .category a:hover >img{
+    opacity:0.3
+}
+
+.product-categories-list-with-header .categories .category a:hover > h4{
+ 
+}
+
+.single-product-wrapper{
+    margin-top:100px
+}
+
+.header-icons{
+    display: none !important;
+}
+
+.wa__btn_popup .wa__btn_popup_txt {
+    background-color: rgb(45, 183, 66);
+    color: #fff;
+    font-weight: 500;
+
+}
+
+.top-bar{
+    background-color: rgb(45, 183, 66);
+    color: #fff;
+    font-weight: bold;
+    position: fixed;
+    
+    width: 100%;
+    z-index: 9999999999;
+
+
+}
+
+.top-bar li{
+    color: #fff !important;
+}
+
+.top-bar a{
+    color: #094a7b;
+    margin-left: 10px;
+    font-size: 1.1em;
+    
+}
+
+#masthead{
+    padding-top: 40px;
+}
+
+
+@media (max-width:480px){
+    #masthead{
+        padding-top: 100px;
+    }
+}

@@ -1,0 +1,35 @@
+[2020-05-11 00:51:52] [INFO ] INFO: initTransaction - amount: 39200, sessionId: 5eb8a1a8d9723, buyOrder: 3843, txDate: 11-05-2020, txTime: 00:51:52
+[2020-05-11 00:51:53] [INFO ] INFO: initTransaction - initResult: {"error":"Error conectando a Webpay (Verificar que la informaci&oacute;n del certificado sea correcta)","detail":" Commerce code (5970341794170) and commerce signature (597034179417) do not match(306) "}
+[2020-05-11 00:51:53] [ERROR] ERROR: {"error":"Error al crear la transacci\u00f3n","detail":"No se ha creado la transacci\u00f3n para, amount: 39200, sessionId: 5eb8a1a8d9723, buyOrder: 3843"}
+[2020-05-11 00:53:36] [INFO ] INFO: initTransaction - amount: 39200, sessionId: 5eb8a210448c7, buyOrder: 3843, txDate: 11-05-2020, txTime: 00:53:36
+[2020-05-11 00:53:36] [INFO ] INFO: initTransaction - initResult: {"error":"Error conectando a Webpay (Verificar que la informaci&oacute;n del certificado sea correcta)","detail":" Commerce code (5970341794170) and commerce signature (597034179417) do not match(306) "}
+[2020-05-11 00:53:36] [ERROR] ERROR: {"error":"Error al crear la transacci\u00f3n","detail":"No se ha creado la transacci\u00f3n para, amount: 39200, sessionId: 5eb8a210448c7, buyOrder: 3843"}
+[2020-05-11 13:55:07] [INFO ] INFO: initTransaction - amount: 33000, sessionId: 5eb9593b4a62e, buyOrder: 3844, txDate: 11-05-2020, txTime: 13:55:07
+[2020-05-11 13:55:07] [INFO ] INFO: initTransaction - initResult: {"error":"Error conectando a Webpay (Verificar que la informaci&oacute;n del certificado sea correcta)","detail":" Commerce code (5970341794170) and commerce signature (597034179417) do not match(306) "}
+[2020-05-11 13:55:07] [ERROR] ERROR: {"error":"Error al crear la transacci\u00f3n","detail":"No se ha creado la transacci\u00f3n para, amount: 33000, sessionId: 5eb9593b4a62e, buyOrder: 3844"}
+[2020-05-11 13:58:34] [INFO ] INFO: initTransaction - amount: 33000, sessionId: 5eb95a0a9706c, buyOrder: 3844, txDate: 11-05-2020, txTime: 13:58:34
+[2020-05-11 13:58:34] [INFO ] INFO: initTransaction - initResult: {"error":"Error conectando a Webpay (Verificar que la informaci&oacute;n del certificado sea correcta)","detail":" Commerce code (5970341794170) and commerce signature (597034179417) do not match(306) "}
+[2020-05-11 13:58:34] [ERROR] ERROR: {"error":"Error al crear la transacci\u00f3n","detail":"No se ha creado la transacci\u00f3n para, amount: 33000, sessionId: 5eb95a0a9706c, buyOrder: 3844"}
+[2020-05-11 16:53:58] [INFO ] INFO: initTransaction - amount: 18700, sessionId: 5eb98326b00d6, buyOrder: 3845, txDate: 11-05-2020, txTime: 16:53:58
+[2020-05-11 16:53:59] [INFO ] INFO: initTransaction - initResult: {"error":"Error conectando a Webpay (Verificar que la informaci&oacute;n del certificado sea correcta)","detail":" Commerce code (5970341794170) and commerce signature (597034179417) do not match(306) "}
+[2020-05-11 16:53:59] [ERROR] ERROR: {"error":"Error al crear la transacci\u00f3n","detail":"No se ha creado la transacci\u00f3n para, amount: 18700, sessionId: 5eb98326b00d6, buyOrder: 3845"}
+[2020-05-11 16:57:48] [INFO ] INFO: initTransaction - amount: 18700, sessionId: 5eb9840c1219f, buyOrder: 3845, txDate: 11-05-2020, txTime: 16:57:48
+[2020-05-11 16:57:48] [INFO ] INFO: initTransaction - initResult: {"error":"Error conectando a Webpay (Verificar que la informaci&oacute;n del certificado sea correcta)","detail":" Commerce code (5970341794170) and commerce signature (597034179417) do not match(306) "}
+[2020-05-11 16:57:48] [ERROR] ERROR: {"error":"Error al crear la transacci\u00f3n","detail":"No se ha creado la transacci\u00f3n para, amount: 18700, sessionId: 5eb9840c1219f, buyOrder: 3845"}
+[2020-05-11 17:05:28] [INFO ] INFO: initTransaction - amount: 18700, sessionId: 5eb985d883f96, buyOrder: 3845, txDate: 11-05-2020, txTime: 17:05:28
+[2020-05-11 17:05:28] [INFO ] INFO: initTransaction - initResult: {"error":"Error conectando a Webpay (Verificar que la informaci&oacute;n del certificado sea correcta)","detail":" Commerce code (5970341794170) and commerce signature (597034179417) do not match(306) "}
+[2020-05-11 17:05:28] [ERROR] ERROR: {"error":"Error al crear la transacci\u00f3n","detail":"No se ha creado la transacci\u00f3n para, amount: 18700, sessionId: 5eb985d883f96, buyOrder: 3845"}
+[2020-05-11 17:08:01] [INFO ] INFO: initTransaction - amount: 10, sessionId: 5eb9867195906, buyOrder: 3848, txDate: 11-05-2020, txTime: 17:08:01
+[2020-05-11 17:08:01] [INFO ] INFO: initTransaction - initResult: {"error":"Error conectando a Webpay (Verificar que la informaci&oacute;n del certificado sea correcta)","detail":" Commerce code (5970341794170) and commerce signature (597034179417) do not match(306) "}
+[2020-05-11 17:08:01] [ERROR] ERROR: {"error":"Error al crear la transacci\u00f3n","detail":"No se ha creado la transacci\u00f3n para, amount: 10, sessionId: 5eb9867195906, buyOrder: 3848"}
+[2020-05-11 17:14:16] [INFO ] INFO: initTransaction - amount: 990, sessionId: 5eb987e868cb3, buyOrder: _Healthcheck_, txDate: 11-05-2020, txTime: 17:14:16
+[2020-05-11 17:14:16] [INFO ] INFO: initTransaction - initResult: {"return":null,"token":"ea637cb0dd4759520e3622b12ac34427b1b13bf1ac5e831e52eae689e937ab37","url":"https:\/\/webpay3g.transbank.cl:443\/webpayserver\/initTransaction"}
+[2020-05-11 17:14:24] [INFO ] INFO: initTransaction - amount: 10, sessionId: 5eb987f05ef70, buyOrder: 3848, txDate: 11-05-2020, txTime: 17:14:24
+[2020-05-11 17:14:24] [INFO ] INFO: initTransaction - initResult: {"return":null,"token":"e6cc7e908a0c4a1ca9c154c5c027a69e3250c0e22ae845d3d2cbc3113dad6f96","url":"https:\/\/webpay3g.transbank.cl:443\/webpayserver\/initTransaction"}
+[2020-05-11 17:15:54] [INFO ] INFO: getTransactionResult - tokenWs: e6cc7e908a0c4a1ca9c154c5c027a69e3250c0e22ae845d3d2cbc3113dad6f96
+[2020-05-11 18:54:20] [INFO ] INFO: initTransaction - amount: 33000, sessionId: 5eb99f5c32539, buyOrder: 3849, txDate: 11-05-2020, txTime: 18:54:20
+[2020-05-11 18:54:20] [INFO ] INFO: initTransaction - initResult: {"return":null,"token":"ee4030acf18bb564843d54f8fccf417853aaef088c0a6deaf753dea68779191b","url":"https:\/\/webpay3g.transbank.cl:443\/webpayserver\/initTransaction"}
+[2020-05-11 18:55:41] [INFO ] INFO: getTransactionResult - tokenWs: ee4030acf18bb564843d54f8fccf417853aaef088c0a6deaf753dea68779191b
+[2020-05-11 23:43:23] [INFO ] INFO: initTransaction - amount: 118900, sessionId: 5eb9e31b47412, buyOrder: 3850, txDate: 11-05-2020, txTime: 23:43:23
+[2020-05-11 23:43:23] [INFO ] INFO: initTransaction - initResult: {"return":null,"token":"e82079ed9c74881d0bff203edbfbd7f635585317dc1c7b581a3fedeae1c4cab5","url":"https:\/\/webpay3g.transbank.cl:443\/webpayserver\/initTransaction"}
+[2020-05-11 23:44:42] [INFO ] INFO: getTransactionResult - tokenWs: e82079ed9c74881d0bff203edbfbd7f635585317dc1c7b581a3fedeae1c4cab5

@@ -1,0 +1,449 @@
+# Translation of Plugins - CAPTCHA 4WP - Stable (latest release) in Spanish (Spain)
+# This file is distributed under the same license as the Plugins - CAPTCHA 4WP - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-01-15 17:31:16+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.0-alpha.3\n"
+"Language: es\n"
+"Project-Id-Version: Plugins - CAPTCHA 4WP - Stable (latest release)\n"
+
+#: admin/settings.php:818
+msgid "Confirm CAPTCHA method change"
+msgstr "Confirmar cambio en el método de CAPTCHA"
+
+#: admin/settings.php:817
+msgid "Switching CAPTCHA methods will require your Site Key and Secret key to be replaced, do you wish to proceed?"
+msgstr "Cambiar los métodos de CAPTCHA requerirá que se reemplacen la clave del sitio y la clave secreta, ¿deseas continuar?"
+
+#: admin/settings.php:220
+msgid "Once you enter the Site and Secret keys above the CAPTCHA method will appear below, depending on the method chosen. If the keys are incorrect, there will be an error notice. If you do see an error, check they provided keys match the method and the domain as well."
+msgstr "Una vez que ingreses el sitio y las claves secretas arriba, el método CAPTCHA aparecerá a continuación, según el método elegido. Si las claves son incorrectas, habrá un aviso de error. Si ves un error, comprueba que las claves proporcionadas coincidan con el método y el dominio también."
+
+#: admin/settings.php:219
+msgid "Key Validation"
+msgstr "Validación de la clave"
+
+#: admin/settings.php:852
+msgid "CAPTCHA integration & configuration"
+msgstr "Integración y configuración del CAPTCHA"
+
+#: admin/settings.php:842
+msgid "I'll configure it later"
+msgstr "Lo configuraré más tarde"
+
+#: admin/settings.php:841
+msgid "Configure it now"
+msgstr "Configúralo ahora"
+
+#: admin/settings.php:381
+msgid "Badge shows for invisible captcha v3"
+msgstr "Programas de insignias para captcha invisible v3"
+
+#: admin/settings.php:238
+msgid "Use the below settings to configure and fine-tune CAPTCHA to your requirements. All the below settings are optional and with them you can configure different aspects of the CAPTCHA checks on your website, such as look and feel and also sensitivy."
+msgstr "Usa los ajustes a continuación para configurar y ajustar CAPTCHA a sus requisitos. Todos los ajustes a continuación son opcionales y con ellos puede configurar diferentes aspectos de las comprobaciones de CAPTCHA en tu web, como la apariencia y también la sensibilidad."
+
+#: admin/settings.php:228
+msgid "STEP 3 (OPTIONAL): Fine-tune reCAPTCHA to your requirements"
+msgstr "PASO 3 (OPCIONAL): Ajusta el reCAPTCHA a tus requisitos"
+
+#: admin/settings.php:100
+msgid "Settings & placements"
+msgstr "Ajustes y ubicaciones"
+
+#. translators: link to the settings page with text "Settings page"
+#: admin/settings.php:99
+msgid "Follow the 3 steps on this CAPTCHA configuration page to configure the integration with the Google reCAPTCHA service so you can use CAPTCHA checks on your website. use on your website. Once you configure the integration navigate to the %s page to configure where CAPTCHA should be added on your website, whitelist IP addresses and configure other settings"
+msgstr "Sigue los 3 pasos en esta página de configuración de CAPTCHA para configurar la integración con el servicio Google reCAPTCHA para que pueda usar las comprobaciones de CAPTCHA en tu web. utilizalo en tu sitio web. Una vez que configures la integración, navega a la página %s para configurar dónde se debe añadir el CAPTCHA en tu web, incluir direcciones IP en la lista blanca y configurar otros ajustes"
+
+#: admin/templates/upgrade/index.php:22
+msgid "Upgrade today for access to these plugin feature's and our first class premium support"
+msgstr "Actualiza hoy para acceder a estas características de plugin y nuestro soporte premium de primera clase"
+
+#: admin/templates/help/system-info.php:19
+msgid "System information"
+msgstr "Información del sistema"
+
+#: admin/templates/help/sidebar.php:38 admin/templates/help/sidebar.php:65
+#: admin/templates/help/sidebar.php:92
+msgid "LEARN MORE"
+msgstr "MÁS INFORMACIÓN"
+
+#: admin/templates/help/sidebar.php:14
+msgid "Other plugins developed by us:"
+msgstr "Otros plugins desarrollados por nosotros:"
+
+#: admin/templates/help/index.php:20
+msgid "System Info"
+msgstr "Información del sistema"
+
+#: admin/templates/help/index.php:19
+msgid "Help"
+msgstr "Ayuda"
+
+#: admin/templates/help/help.php:62
+msgid "Rate plugin"
+msgstr "Valora el plugin"
+
+#: admin/templates/help/help.php:58
+msgid "Rate CAPTCHA 4WP"
+msgstr "Valora CAPTCHA 4WP"
+
+#: admin/templates/help/help.php:52
+msgid "Knowledge Base"
+msgstr "Base de conocimientos"
+
+#: admin/settings.php:980
+msgid "Get a FREE 7-day trial"
+msgstr "Obten una peirodo de prueba gratuito de 7 días"
+
+#: admin/settings.php:159
+msgid "(Incompatible with Jetpack comments)"
+msgstr "(Incompatible con los comentarios de jetpack)"
+
+#: admin/settings.php:189
+msgid "STEP 2: Specify the Site & Secret keys"
+msgstr "PASO 2: Especifica la clave del sitio y la clave secreta"
+
+#. Plugin Name of the plugin
+#: admin/settings.php:734 admin/settings.php:755
+msgid "CAPTCHA 4WP"
+msgstr "CAPTCHA 4WP"
+
+#: admin/settings.php:140
+msgid "This means that you might end up locked out from your website. Therefore test this on a staging website website beforehand."
+msgstr "Esto significa que podrías terminar bloqueado fuera de tu web. Por tanto, pruébalo en una web de pruebas por anticipado."
+
+#: admin/settings.php:138
+msgid "very restrictive"
+msgstr "muy restrictivo"
+
+#. translators: expression "very restrictive" in bold
+#: admin/settings.php:137
+msgid "Any value above 0.5 is %s."
+msgstr "Cualquier valor por encima de 0.5 es %s."
+
+#. Author URI of the plugin
+msgid "https://www.wpwhitesecurity.com/"
+msgstr "https://www.wpwhitesecurity.com/"
+
+#. Author of the plugin
+msgid "WP White Security"
+msgstr "WP White Security"
+
+#. Plugin URI of the plugin
+msgid "https://www.wpwhitesecurity.com/wordpress-plugins/captcha-plugin-wordpress/"
+msgstr "https://www.wpwhitesecurity.com/wordpress-plugins/captcha-plugin-wordpress/"
+
+#: admin/settings.php:244
+msgid "Captcha Score"
+msgstr "Puntuación Captcha"
+
+#: admin/settings.php:260
+msgid "Form Pages"
+msgstr "Páginas de formulario"
+
+#: admin/settings.php:259
+msgid "All Pages"
+msgstr "Todas las páginas"
+
+#: anr-captcha-class.php:689
+msgid "Comment Submission Failure"
+msgstr "Fallo al enviar el comentario"
+
+#. translators:field type
+#: admin/settings.php:634
+msgid "No hook defined for %s"
+msgstr "Ningún gancho definido para %s"
+
+#: admin/settings.php:397
+msgid "Remove CSS"
+msgstr "Eliminar CSS"
+
+#: anr-captcha-class.php:96
+msgid "Please solve Captcha correctly"
+msgstr "Por favor, resuelve el captcha correctamente"
+
+#: admin/settings.php:212
+msgid "Secret Key"
+msgstr "Clave secreta"
+
+#: anr-captcha-class.php:98
+msgid "ERROR"
+msgstr "ERROR"
+
+#: admin/settings.php:369
+msgid "Badge shows for invisible captcha"
+msgstr "Acreditación mostrada para el captcha invisible"
+
+#: admin/settings.php:367
+msgid "Inline"
+msgstr "Integrado"
+
+#: admin/settings.php:366 admin/settings.php:379
+msgid "Bottom Left"
+msgstr "Abajo a la izquierda"
+
+#: admin/settings.php:365 admin/settings.php:378
+msgid "Bottom Right"
+msgstr "Abajo a la derecha"
+
+#: admin/settings.php:359 admin/settings.php:372
+msgid "Badge"
+msgstr "Acreditación"
+
+#: admin/settings.php:355
+msgid "Compact"
+msgstr "Compacto"
+
+#: admin/settings.php:354
+msgid "Normal"
+msgstr "Normal"
+
+#: admin/settings.php:344
+msgid "Dark"
+msgstr "Oscuro"
+
+#: admin/settings.php:343
+msgid "Light"
+msgstr "Claro"
+
+#: functions.php:47
+msgid "<strong>ERROR</strong>: "
+msgstr "<strong>ERROR</strong>: "
+
+#: admin/settings.php:402
+msgid "This css increase login page width to adjust with Captcha width."
+msgstr "Este CSS aumenta el ancho de la página de acceso para ajustarlo con el ancho del captcha."
+
+#: admin/settings.php:401
+msgid "Remove this plugin's css from login page?"
+msgstr "¿Eliminar el CSS de este plugin de la página de acceso?"
+
+#: admin/settings.php:331
+msgid "Error message"
+msgstr "Mensaje de error"
+
+#: admin/settings.php:348
+msgid "Size"
+msgstr "Tamaño"
+
+#: admin/settings.php:337
+msgid "Theme"
+msgstr "Tema"
+
+#: admin/settings.php:207
+msgid "Site Key"
+msgstr "Clave del sitio"
+
+#: admin/settings.php:156
+msgid "Comments form"
+msgstr "Formulario de comentarios"
+
+#: admin/settings.php:431
+msgid "Reset password form"
+msgstr "Formulario de restablecimiento de contraseña"
+
+#: admin/settings.php:432
+msgid "Lost password form"
+msgstr "Formulario de contraseña perdida"
+
+#: admin/settings.php:430
+msgid "Registration form"
+msgstr "Formulario de registro"
+
+#: admin/settings.php:429
+msgid "Login form"
+msgstr "Formulario de acceso"
+
+#: admin/settings.php:327
+msgid "Vietnamese"
+msgstr "Vietnamita"
+
+#: admin/settings.php:326
+msgid "Ukrainian"
+msgstr "Ucraniano"
+
+#: admin/settings.php:325
+msgid "Turkish"
+msgstr "Turco"
+
+#: admin/settings.php:324
+msgid "Thai"
+msgstr "Tailandés"
+
+#: admin/settings.php:323
+msgid "Swedish"
+msgstr "Sueco"
+
+#: admin/settings.php:322
+msgid "Spanish (Latin America)"
+msgstr "Español (Latinoamérica)"
+
+#: admin/settings.php:321
+msgid "Spanish"
+msgstr "Español"
+
+#: admin/settings.php:320
+msgid "Slovenian"
+msgstr "Esloveno"
+
+#: admin/settings.php:319
+msgid "Slovak"
+msgstr "Eslovaco"
+
+#: admin/settings.php:318
+msgid "Serbian"
+msgstr "Serbio"
+
+#: admin/settings.php:317
+msgid "Russian"
+msgstr "Ruso"
+
+#: admin/settings.php:316
+msgid "Romanian"
+msgstr "Rumano"
+
+#: admin/settings.php:315
+msgid "Portuguese (Portugal)"
+msgstr "Portugués (Portugal)"
+
+#: admin/settings.php:314
+msgid "Portuguese (Brazil)"
+msgstr "Portugués (Brasil)"
+
+#: admin/settings.php:313
+msgid "Portuguese"
+msgstr "Portugués"
+
+#: admin/settings.php:312
+msgid "Polish"
+msgstr "Polaco"
+
+#: admin/settings.php:311
+msgid "Persian"
+msgstr "Persa"
+
+#: admin/settings.php:310
+msgid "Norwegian"
+msgstr "Noruego"
+
+#: admin/settings.php:309
+msgid "Lithuanian"
+msgstr "Lituano"
+
+#: admin/settings.php:308
+msgid "Latvian"
+msgstr "Letón"
+
+#: admin/settings.php:307
+msgid "Korean"
+msgstr "Koreano"
+
+#: admin/settings.php:306
+msgid "Japanese"
+msgstr "Japonés"
+
+#: admin/settings.php:305
+msgid "Italian"
+msgstr "Italiano"
+
+#: admin/settings.php:304
+msgid "Indonesian"
+msgstr "Indonesio"
+
+#: admin/settings.php:303
+msgid "Hungarain"
+msgstr "Húngaro"
+
+#: admin/settings.php:302
+msgid "Hindi"
+msgstr "Hindú"
+
+#: admin/settings.php:301
+msgid "Hebrew"
+msgstr "Hebreo"
+
+#: admin/settings.php:300
+msgid "Greek"
+msgstr "Griego"
+
+#: admin/settings.php:299
+msgid "German (Switzerland)"
+msgstr "Alemán (Suiza)"
+
+#: admin/settings.php:298
+msgid "German (Austria)"
+msgstr "Alemán (Austria)"
+
+#: admin/settings.php:297
+msgid "German"
+msgstr "Alemán"
+
+#: admin/settings.php:296
+msgid "French (Canadian)"
+msgstr "Francés (Canadiense)"
+
+#: admin/settings.php:295
+msgid "French"
+msgstr "Francés"
+
+#: admin/settings.php:294
+msgid "Finnish"
+msgstr "Finlandés"
+
+#: admin/settings.php:293
+msgid "Filipino"
+msgstr "Filipino"
+
+#: admin/settings.php:292
+msgid "English (US)"
+msgstr "Inglés (US)"
+
+#: admin/settings.php:291
+msgid "English (UK)"
+msgstr "Inglés (UK)"
+
+#: admin/settings.php:290
+msgid "Dutch"
+msgstr "Neerlandés"
+
+#: admin/settings.php:289
+msgid "Danish"
+msgstr "Danés"
+
+#: admin/settings.php:288
+msgid "Czech"
+msgstr "Checoslovaco"
+
+#: admin/settings.php:287
+msgid "Croatian"
+msgstr "Croata"
+
+#: admin/settings.php:286
+msgid "Chinese (Traditional)"
+msgstr "Chino (Tradicional)"
+
+#: admin/settings.php:285
+msgid "Chinese (Simplified)"
+msgstr "Chino (Simple)"
+
+#: admin/settings.php:284
+msgid "Catalan"
+msgstr "Catalán"
+
+#: admin/settings.php:283
+msgid "Bulgarian"
+msgstr "Búlgaro"
+
+#: admin/settings.php:282
+msgid "Arabic"
+msgstr "Árabe"
+
+#: admin/settings.php:1036
+msgid "Settings"
+msgstr "Ajustes"

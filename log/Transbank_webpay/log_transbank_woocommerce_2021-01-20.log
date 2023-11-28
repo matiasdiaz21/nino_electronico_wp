@@ -1,0 +1,2 @@
+[2021-01-20 16:51:53] [INFO ] INFO: initTransaction - amount: 20500, sessionId: 60085fa9e87a9, buyOrder: 7132, txDate: 20-01-2021, txTime: 16:51:53
+[2021-01-20 16:51:54] [INFO ] INFO: createTransaction - initResult: {"token":"1231ad0dbbd1ce1d4261291ff08c6daaa069b24fd43c3654457b08be1ef6e2f9","url":"https:\/\/webpay3g.transbank.cl:443\/webpayserver\/initTransaction"}

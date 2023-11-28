@@ -1,0 +1,3 @@
+2023-03-11T14:00:19+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_WebHooks_Sync queued
+2023-03-11T14:00:19+00:00 NOTICE admin :: syncing webhooks for existing plugin
+2023-03-11T14:00:19+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_WebHooks_Sync queued

@@ -1,0 +1,2 @@
+[2019-09-26 18:42:24] [INFO ] INFO: initTransaction - amount: 96000, sessionId: 5d8d06908575c, buyOrder: 2588, txDate: 26-09-2019, txTime: 18:42:24
+[2019-09-26 18:42:25] [INFO ] INFO: initTransaction - initResult: {"return":null,"token":"e355199e9255dca1333f0d46ee74803a467a442014016cf47d50e1b13e1362dd","url":"https:\/\/webpay3g.transbank.cl:443\/webpayserver\/initTransaction"}
