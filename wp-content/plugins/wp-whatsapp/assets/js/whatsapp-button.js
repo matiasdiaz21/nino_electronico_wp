@@ -14,23 +14,25 @@
     };
     init();
 
-    // Support Riode Theme
-    if (typeof(Riode) !== 'undefined' && typeof(jQuery) !== 'undefined') {
-      Riode.$window.on('riode_load', function(){ init() })
+    if (window.jQuery) {
+      // Support Riode Theme
+      if (typeof(Riode) !== 'undefined' && typeof(jQuery) !== 'undefined') {
+        Riode.$window.on('riode_load', function(){ init() })
+        jQuery(document).ajaxComplete((e, xhs, req) => {
+          try {
+            if (req.data.indexOf('riode_quickview') > -1) { init() }
+          } catch (e) {
+            console.log("error")
+          }
+        })
+      }
+
+      // Support Porto Theme 	
       jQuery(document).ajaxComplete((e, xhs, req) => {
         try {
-          if (req.data.indexOf('riode_quickview') > -1) { init() }
-        } catch (e) {
-          console.log("error")
-        }
+          if (req.data.indexOf('action=porto_lazyload_menu') > -1) { init() }
+        } catch (e) {}
       })
     }
-
-    // Support Porto Theme 	
-    jQuery(document).ajaxComplete((e, xhs, req) => {
-      try {
-        if (req.data.indexOf('action=porto_lazyload_menu') > -1) { init() }
-      } catch (e) {}
-    })
   });
 })();

@@ -26,7 +26,7 @@ class PostType
 
     private function doHooks(){
         add_action('init', array($this, 'register_post_type')); 
-        add_action('save_post_whatsapp-accounts', [$this, 'save_account'], 10, 3);
+        add_action('save_post_whatsapp-accounts', [$this, 'save_account'], 10, 999);
         add_action('add_meta_boxes', [$this, 'add_meta_boxes']);
 
         add_filter('manage_whatsapp-accounts_posts_columns', [$this, 'manager_accounts_columns'], 10, 1);
@@ -172,6 +172,8 @@ class PostType
 
     public function save_account($post_id, $post, $update)
     {
+        remove_all_actions('save_post');
+
         if (isset($post->post_status) && 'auto-draft' == $post->post_status) {
             return;
         }

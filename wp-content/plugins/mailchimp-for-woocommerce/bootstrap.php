@@ -22,7 +22,9 @@ spl_autoload_register(function($class) {
         'Mailchimp_Woocommerce_Deactivation_Survey' => 'includes/class-mailchimp-woocommerce-deactivation-survey.php',
         'MailChimp_WooCommerce_Rest_Api' => 'includes/class-mailchimp-woocommerce-rest-api.php',
         'Mailchimp_Wocoomerce_CLI' => 'includes/class-mailchimp-woocommerce-cli.php',
-        
+        'MailChimp_WooCommerce_HPOS' => 'includes/class-mailchimp-woocommerce-hpos.php',
+        'Mailchimp_Woocommerce_Block_Editor' => 'includes/class-mailchimp-woocommerce-block-editor.php',
+
         // includes/api/assets
         'MailChimp_WooCommerce_Address' => 'includes/api/assets/class-mailchimp-address.php',
         'MailChimp_WooCommerce_Cart' => 'includes/api/assets/class-mailchimp-cart.php',
@@ -95,7 +97,7 @@ function mailchimp_environment_variables() {
     return (object) array(
         'repo' => 'master',
         'environment' => 'production', // staging or production
-        'version' => '2.8',
+        'version' => '3.3',
         'php_version' => phpversion(),
         'wp_version' => (empty($wp_version) ? 'Unknown' : $wp_version),
         'wc_version' => function_exists('WC') ? WC()->version : null,
@@ -334,8 +336,9 @@ function mailchimp_get_list_id() {
  * @return string
  */
 function mailchimp_build_webhook_url( $key ) {
-    //$key = base64_encode($key);
-    return MailChimp_WooCommerce_Rest_Api::url('member-sync') . '?auth=' . $key;
+	$rest_url = MailChimp_WooCommerce_Rest_Api::url('member-sync');
+	$qs = mailchimp_string_contains($rest_url, '/wp-json/') ? '?' : '&';
+    return $rest_url.$qs."auth={$key}";
 }
 /**
  * Generate random string
@@ -688,8 +691,8 @@ function mailchimp_check_curl_is_installed() {
 }
 
 function mailchimp_check_woocommerce_is_installed() {
-    if (!mailchimp_check_woocommerce_plugin_status()) {
-        // Deactivate the plugin
+    if (!mailchimp_check_woocommerce_plugin_status() && !( defined('WP_CLI') && WP_CLI )) {
+    // Deactivate the plugin
         deactivate_plugins(__FILE__);
         $error_message = __('The MailChimp For WooCommerce plugin requires the <a href="http://wordpress.org/extend/plugins/woocommerce/">WooCommerce</a> plugin to be active!', 'woocommerce');
         wp_die($error_message);
@@ -995,6 +998,15 @@ function mailchimp_email_is_amazon($email) {
  */
 function mailchimp_hash_trim_lower($str) {
     return md5(trim(strtolower($str)));
+}
+
+/**
+ * @param $email
+ * @return mixed
+ */
+function mailchimp_get_wc_customer($email) {
+    global $wpdb;
+    return $wpdb->get_row( "SELECT * FROM `{$wpdb->prefix}wc_customer_lookup` WHERE `email` = '{$email}'" );
 }
 
 /**
@@ -1376,7 +1388,7 @@ function mailchimp_member_data_update($user_email = null, $language = null, $cal
             if ($member['status'] === 'transactional' && in_array($status_if_new, array('subscribed', 'pending'))) {
                 $member['status'] = $status_if_new;
             }
-            if (($member['status'] === 'transactional' && in_array($status_if_new, array('subscribed', 'pending'))) || $member['status'] === 'subscribed') {
+            if (($member['status'] === 'transactional' && in_array($status_if_new, array('subscribed', 'pending'))) || $member['status'] === 'subscribed' || $member['status'] === 'pending') {
                 if (!empty($gdpr_fields) && is_array($gdpr_fields)) {
                     $gdpr_fields_to_save = [];
                     foreach ($gdpr_fields as $id => $value) {
@@ -1520,6 +1532,19 @@ function mailchimp_expanded_alowed_tags() {
 	);
 
 	return $my_allowed;
+}
+
+/**
+ * @param $user_id
+ *
+ * @return DateTime|false|null
+ */
+function mailchimp_get_marketing_status_updated_at($user_id) {
+	if (empty($user_id) || !is_numeric($user_id)) {
+		return null;
+	}
+	$value = get_user_meta($user_id, 'mailchimp_woocommerce_marketing_status_updated_at', true);
+	return !empty($value) && is_numeric($value) ? mailchimp_date_local($value) : null;
 }
 
 // Add WP CLI commands

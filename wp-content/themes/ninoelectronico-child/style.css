@@ -87,7 +87,14 @@ body{
 }
 
 .departments-menu-v2 .departments-menu-v2-title+.dropdown-menu li.menu-item-has-children>a::after{
-    color:#0091FF;
+    color:#fff;
+}
+
+.departments-menu-v2 .departments-menu-v2-title+.dropdown-menu li.menu-item-has-children>a{
+    color:#fff;
+}
+.departments-menu-v2 .departments-menu-v2-title+.dropdown-menu li>a{
+    color:#fff;
 }
 
 .features-list{

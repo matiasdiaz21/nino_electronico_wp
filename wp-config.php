@@ -20,6 +20,7 @@ define('FS_METHOD', 'direct');
  *
  * @package WordPress
  */
+
 // ** Ajustes de MySQL. Solicita estos datos a tu proveedor de alojamiento web. ** //
 /** El nombre de tu base de datos de WordPress */
 define('DB_NAME', 'nino_electronico');
@@ -33,6 +34,21 @@ define('DB_HOST', 'host.docker.internal');
 define('DB_CHARSET', 'utf8');
 /** Cotejamiento de la base de datos. No lo modifiques si tienes dudas. */
 define('DB_COLLATE', '');
+
+
+//define('DB_NAME', 'fr_electronico');
+///** Tu nombre de usuario de MySQL */
+//define('DB_USER', 'electroboss');
+///** Tu contraseña de MySQL */
+//define('DB_PASSWORD', '$Hnk708k4');
+///** Host de MySQL (es muy probable que no necesites cambiarlo) */
+//define('DB_HOST', 'localhost');
+///** Codificación de caracteres para la base de datos. */
+//define('DB_CHARSET', 'utf8');
+///** Cotejamiento de la base de datos. No lo modifiques si tienes dudas. */
+//define('DB_COLLATE', '');
+
+
 /**#@+
  * Claves únicas de autentificación.
  *

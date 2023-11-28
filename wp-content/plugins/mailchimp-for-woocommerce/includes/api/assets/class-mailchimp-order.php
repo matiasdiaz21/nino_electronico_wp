@@ -37,6 +37,7 @@ class MailChimp_WooCommerce_Order {
 	protected $tracking_url         = '';
 	protected $tracking_number      = '';
 	protected $tracking_carrier     = '';
+	protected $processed_at         = null;
 
 	/**
 	 * @param $bool
@@ -403,15 +404,21 @@ class MailChimp_WooCommerce_Order {
 	 */
 	public function setProcessedAt( DateTime $time ) {
 		$this->processed_at_foreign = $time->format( 'Y-m-d H:i:s' );
-
+		$this->processed_at = $time;
 		return $this;
 	}
 
 	/**
-	 * @return null
+	 * @return null|DateTime
 	 */
 	public function getProcessedAt() {
 		return $this->processed_at_foreign;
+	}
+
+	public function getProcessedAtDate() {
+		return !empty($this->processed_at) ?
+			$this->processed_at :
+			(!empty($this->processed_at_foreign) ? new DateTime($this->processed_at_foreign) : null);
 	}
 
 	/**
@@ -676,6 +683,11 @@ class MailChimp_WooCommerce_Order {
 		if ( array_key_exists( 'customer', $data ) ) {
 			$customer_object = new MailChimp_WooCommerce_Customer();
 			$this->setCustomer( $customer_object->fromArray( $data['customer'] ) );
+		}
+
+		// apply the campaign id from the response if there is one.
+		if (array_key_exists('outreach', $data) && !empty($data['outreach']) && array_key_exists('id', $data['outreach'])) {
+			$this->setCampaignId($data['outreach']['id']);
 		}
 
 		return $this;

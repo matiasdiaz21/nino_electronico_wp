@@ -1,14 +1,14 @@
 === WooCommerce ===
 Contributors: automattic, mikejolley, jameskoster, claudiosanches, rodrigosprimo, peterfabian1000, vedjain, jamosova, obliviousharmony, konamiman, sadowski, wpmuguru, royho, barryhughes-1
 Tags: online store, ecommerce, shop, shopping cart, sell online, storefront, checkout, payments, woo, woo commerce, e-commerce, store
-Requires at least: 5.9
-Tested up to: 6.1
-Requires PHP: 7.2
-Stable tag: 7.4.1
+Requires at least: 6.3
+Tested up to: 6.4
+Requires PHP: 7.4
+Stable tag: 8.3.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-WooCommerce is the world’s most popular open-source eCommerce solution.
+Everything you need to launch an online store in days and keep it growing for years. From your first sale to millions in revenue, Woo is with you.
 
 == Description ==
 
@@ -26,9 +26,17 @@ Whether you’re launching a business, taking brick-and-mortar retail online, or
 - **Rise to the top of search results** by leveraging [WordPress’ SEO advantage](https://www.searchenginejournal.com/wordpress-best-cms-seo/).
 - **Build on a platform that scales.** Get flexible eCommerce for [high-volume stores](https://woocommerce.com/high-volume-stores/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=wp_org_repo_listing). 
 
+= THE EASIEST WAY TO TRY WOOCOMMERCE =
+
+Thinking of trying WooCommerce? Woo Express is a simple, all-in-one package that includes fully managed hosting from WordPress.com, popular extensions, and world-class support from Woo — all for one monthly price.
+
+[Try Woo Express free for 14 days](https://woo.com/express/?utm_source=wordpress.org&utm_medium=referral&utm_campaign=wp_org_repo_listing), then get your first 3 months for just $1. 
+
+= ALL THE TOOLS YOU NEED TO SELL =
+
 Built-in tools and popular integrations help you efficiently manage your business operations. Many services are free to add with a single click via the optional [Setup Wizard](https://docs.woocommerce.com/document/woocommerce-setup-wizard/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=wp_org_repo_listing).
 
-- **Choose how you want to get paid**. Conveniently manage payments from the comfort of your store with [WooCommerce Payments](https://woocommerce.com/payments/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=wp_org_repo_listing) (Available in the U.S., U.K., Ireland, Australia, New Zealand, Canada, Spain, France, Germany, and Italy). Securely accept credit cards, mobile wallets, bank transfers, and cash thanks to [100+ payment gateways](https://woocommerce.com/product-category/woocommerce-extensions/payment-gateways/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=wp_org_repo_listing) – including [Stripe](https://woocommerce.com/products/stripe/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=wp_org_repo_listing), [PayPal](https://woocommerce.com/products/woocommerce-gateway-paypal-checkout/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=wp_org_repo_listing), and [Square](https://woocommerce.com/products/square/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=wp_org_repo_listing).
+- **Choose how you want to get paid**. Conveniently manage payments from the comfort of your store with [WooPayments](https://woocommerce.com/payments/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=wp_org_repo_listing) (Available in the U.S., U.K., Ireland, Australia, New Zealand, Canada, Spain, France, Germany, and Italy). Securely accept credit cards, mobile wallets, bank transfers, and cash thanks to [100+ payment gateways](https://woocommerce.com/product-category/woocommerce-extensions/payment-gateways/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=wp_org_repo_listing) – including [Stripe](https://woocommerce.com/products/stripe/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=wp_org_repo_listing), [PayPal](https://woocommerce.com/products/woocommerce-gateway-paypal-checkout/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=wp_org_repo_listing), and [Square](https://woocommerce.com/products/square/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=wp_org_repo_listing).
 - **Configure your shipping options**. Print USPS labels right from your dashboard and even schedule a pickup with [WooCommerce Shipping](https://woocommerce.com/products/shipping/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=wp_org_repo_listing) (U.S.-only). Connect with [well-known carriers](https://woocommerce.com/product-category/woocommerce-extensions/shipping-methods/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=wp_org_repo_listing) such as UPS and FedEx – plus a wide variety of delivery, inventory, and fulfillment solutions for your locale.
 - **Simplify sales tax**. Add [WooCommerce Tax](https://woocommerce.com/products/tax/?utm_medium=referral&utm_source=wordpress.org&utm_campaign=wp_org_repo_listing) or [similar integrated services](https://woocommerce.com/product-category/woocommerce-extensions/tax?utm_medium=referral&utm_source=wordpress.org&utm_campaign=wp_org_repo_listing) to make automated calculations a reality.
 
@@ -136,8 +144,8 @@ Check out [Frequently Asked Questions](https://docs.woocommerce.com/document/fre
 
 = Minimum Requirements =
 
-* PHP 7.2 or greater is recommended
-* MySQL 5.6 or greater is recommended
+* PHP 7.4 or greater is required (PHP 8.0 or greater is recommended)
+* MySQL 5.6 or greater, OR MariaDB version 10.1 or greater, is required
 
 Visit the [WooCommerce server requirements documentation](https://docs.woocommerce.com/document/server-requirements/?utm_source=wp%20org%20repo%20listing&utm_content=3.6) for a detailed list of server requirements.
 
@@ -163,34 +171,12 @@ WooCommerce comes with some sample data you can use to see how products look; im
 
 == Changelog ==
 
-= 7.4.1 2023-03-01 =
+= 8.3.1 2023-11-21 =
 
 **WooCommerce**
 
-* Update - Update WooCommerce Blocks to 9.4.4. [#36982](https://github.com/woocommerce/woocommerce/pull/36982)
-
-
-= 7.4.0 2023-02-18 =
-
-**WooCommerce**
-
-* Fix - Add support for sorting by includes param. [#36215](https://github.com/woocommerce/woocommerce/pull/36215)
-* Fix - Allow product tab navigation without prompting for unsaved changes [#36235](https://github.com/woocommerce/woocommerce/pull/36235)
-* Fix - Convert HTML to blocks in product variation description [#36241](https://github.com/woocommerce/woocommerce/pull/36241)
-* Fix - Decode HTML entities in CategoryBreadcrumbs. [#36321](https://github.com/woocommerce/woocommerce/pull/36321)
-* Fix - Decode HTML entities in CategoryFieldItem. [#36367](https://github.com/woocommerce/woocommerce/pull/36367)
-* Fix - Ensure order emails are responsive in most email clients, including when the current language is RTL. [#36310](https://github.com/woocommerce/woocommerce/pull/36310)
-* Fix - Ensures product variation sort order is correctly persisted. [#36343](https://github.com/woocommerce/woocommerce/pull/36343)
-* Fix - Ensure wc_get_order() works without arguments when HPOS is enabled. [#36496](https://github.com/woocommerce/woocommerce/pull/36496)
-* Fix - Fix "Save changes?" modal saves the options after selecting the 'Discard' option [#36160](https://github.com/woocommerce/woocommerce/pull/36160)
-* Fix - Fix attributes/options lists corrupt render #36236 [#36236](https://github.com/woocommerce/woocommerce/pull/36236)
-* Fix - Fix bug when filtering for customer_id=0. [#36216](https://github.com/woocommerce/woocommerce/pull/36216)
-* Fix - Fix deprecated usage of ${var} in strings [#36439](https://github.com/woocommerce/woocommerce/pull/36439)
-* Fix - Fix edit attribute modal terms list [#36186](https://github.com/woocommerce/woocommerce/pull/36186)
-* Fix - Fixes editing of child product reviews. [#35888](https://github.com/woocommerce/woocommerce/pull/35888)
-* Fix - Fix for product filters when 'shop' page is the front page. [#36224](https://github.com/woocommerce/woocommerce/pull/36224)
-* Fix - Fix issue where attribute term dropdown was not adhering to sort order setting. [#36047](https://github.com/woocommerce/woocommerce/pull/36047)
-* Fix - Fix navigation between variations and tab selection [#36239](https://github.com/woocommerce/woocommerce/pull/36239)
+* Fix - Invalidate coupon cache after hold/usage data is modified in datastore via SQL [#41538](https://github.com/woocommerce/woocommerce/pull/41538)
+* Update - Update WooCommerce Blocks to 11.4.9. [#41610](https://github.com/woocommerce/woocommerce/pull/41610)
 
 
 [See changelog for all versions](https://raw.githubusercontent.com/woocommerce/woocommerce/trunk/changelog.txt).

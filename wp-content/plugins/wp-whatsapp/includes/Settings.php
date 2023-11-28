@@ -104,8 +104,9 @@ class Settings
 		}
 
 		if ( 'go_whatsapp_pro' === $_GET['page'] ) {
-			wp_redirect( 'https://1.envato.market/whatsapp-pro' );
-			die;
+            ?>
+				<script>window.location.href = 'https://1.envato.market/whatsapp-pro'</script>
+			<?php
 		}
 	}
 

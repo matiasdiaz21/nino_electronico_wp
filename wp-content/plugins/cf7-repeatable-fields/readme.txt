@@ -1,20 +1,18 @@
 === Contact Form 7 - Repeatable Fields ===
 Contributors: felipeelia
-Donate link: https://felipeelia.dev/contact-form-7-repeatable-fields/
-Tags: contact form 7, cf7, repeater, repeatable
-Requires at least: 4.6
-Tested up to: 5.3
-Requires PHP: 5.3
-Stable tag: 1.1.3
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Donate link:  https://felipeelia.dev/contact-form-7-repeatable-fields/
+Tags:         contact form 7, cf7, repeater, repeatable
+Tested up to: 6.3
+Stable tag:   2.0.1
+License:      GPLv2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
 
 Adds repeatable groups of fields to Contact Form 7.
 
 == Description ==
 This plugin adds repeatable groups of fields to Contact Form 7.
 
-**NOTE:** Tested with Contact Form 7 5.1.6.
+**NOTE:** Tested with Contact Form 7 5.7.7.
 
 == Usage ==
 
@@ -22,20 +20,20 @@ This plugin adds repeatable groups of fields to Contact Form 7.
 Wrap the desired fields with `[field_group your_group_id_here][/field_group]`. The shortcode accepts additional parameters, in WP shortcode format and in CF7 fields parameters format as well.
 
 Example:
-~~~~
+~~~
 [field_group emails id="emails-groups" tabindex:1]
 	<label>Your Email (required)[email* your-email]</label>
 	[radio your-radio use_label_element default:1 "radio 1" "radio 2" "radio 3"]
 	[select* your-menu include_blank "option1" "option 2"]
 	[checkbox* your-checkbox "check 1" "check 2"]
 [/field_group]
-~~~~
+~~~
 
 = Mail tab =
 In the mail settings, wrap the fields with your group id. You can use the `[group_index]` tag to print the group index and an additional `__<NUMBER>` to print a field at a specific index.
 
 Example:
-~~~~
+~~~
 The second email entered by the user was: [your-email__2]
 
 These were the groups:
@@ -46,125 +44,103 @@ GROUP #[group_index]
 	Radio: [your-radio]
 	Select: [your-menu]
 [/emails]
-~~~~
-
-== Customizing the add and remove buttons ==
-You can [add filters](https://developer.wordpress.org/reference/functions/add_filter/) to your theme to customize the add and remove buttons.
-
-Example
-~~~
-// In your theme's functions.php
-function customize_add_button_atts( $attributes ) {
-  return array_merge( $attributes, array(
-    'text' => 'Add Entry',
-  ) );
-}
-add_filter( 'wpcf7_field_group_add_button_atts', 'customize_add_button_atts' );
 ~~~
 
-The available filters are:
+== Check out the Wiki ==
 
-= wpcf7_field_group_add_button_atts =
-
-Filters the add button attributes.
-
-Parameters:
-* $attributes: Array of attributes for the add button. Keys:
- * `additional_classes`: css class(es) to add to the button
- * `text`: text used for the button
-
-Return value: array of button attributes
-
-= wpcf7_field_group_add_button =
-
-Filters the add button HTML.
-
-Parameters:
-* $html: Default add button HTML
-
-Return value: button HTML
-
-= wpcf7_field_group_remove_button_atts =
-
-Filters the remove button attributes.
-
-Parameters:
-* $attributes: Array of attributes for the remove button. Keys:
- * `additional_classes`: css class(es) to add to the button
- * `text`: text used for the button
-
-Return value: array of button attributes
-
-= wpcf7_field_group_remove_button =
-
-Filters the remove button HTML.
-
-Parameters:
-* $html: Default remove button HTML
-
-Return value: button HTML
+* [Hooks available](https://github.com/felipeelia/cf7-repeatable-fields/wiki/Hooks) - How to customize the _add_ and _remove_ buttons
+* [Frequently Asked Questions](https://github.com/felipeelia/cf7-repeatable-fields/wiki/Frequently-Asked-Questions)
 
 == Contribute ==
 You can contribute with code, issues and ideas at the [GitHub repository](https://github.com/felipeelia/cf7-repeatable-fields).
 
-If you like it, a review is appreciated :)
+If you like the plugin, [a review](https://wordpress.org/support/plugin/cf7-repeatable-fields/reviews/#new-post) is appreciated :)
 
 == Frequently Asked Questions ==
 
-= Can I change the add/remove buttons? =
+= I have a problem with the plugin. Where can I get help? =
 
-Yes. You can use `wpcf7_field_group_add_button_atts`, `wpcf7_field_group_add_button`, `wpcf7_field_group_remove_button_atts`, and `wpcf7_field_group_remove_button` filters, as shown above. Props to @berniegp.
+If you have identified a bug or would like to suggest an enhancement, please refer to our [GitHub repo](https://github.com/felipeelia/cf7-repeatable-fields). I do not provide support here at WordPress.org forums.
 
-= How can I display the group index number in the form? =
+= My question is not listed here. Can I search somewhere else? =
 
-You'll have to use the `wpcf7-field-groups/change` jQuery event.
-
-In the Form tab, add an element to hold the group index. In this example, it'll be a `<span>` with the `group-index` class:
-~~~
-[field_group emails id="emails-groups" tabindex:1]
-	<p>Group #<span class="group-index"></span></p>
-	<label>Your Email (required)[email* your-email]</label>
-	[radio your-radio use_label_element default:1 "radio 1" "radio 2" "radio 3"]
-	[select* your-menu include_blank "option1" "option 2"]
-	[checkbox* your-checkbox "check 1" "check 2"]
-[/field_group]
-~~~
-
-And then you’ll have to add this to your JavaScript code:
-~~~
-jQuery( function( $ ) {
-	$( '.wpcf7-field-groups' ).on( 'wpcf7-field-groups/change', function() {
-		var $groups = $( this ).find( '.group-index' );
-		$groups.each( function() {
-			$( this ).text( $groups.index( this ) + 1 );
-		} );
-	} ).trigger( 'wpcf7-field-groups/change' );
-} );
-~~~
-
-You can add that JS through your theme OR use some plugin like [Simple Custom CSS and JS](https://wordpress.org/plugins/custom-css-js/).
+Yes! Give a look at the [Frequently Asked Questions](https://github.com/felipeelia/cf7-repeatable-fields/wiki/Frequently-Asked-Questions) section of our wiki.
 
 == Changelog ==
 
-To read the full list check our changelog.txt
+= 2.0.1 - 2023-09-11 =
 
-= 1.1.3 =
+__Added:__
+
+* End-to-end tests foundation.
+
+__Changed:__
+
+* Removed unnecessary files from final package.
+
+__Fixed:__
+
+* Required checkbox not showing validation messages.
+
+= 2.0.0 - 2023-07-23 =
+
+**Note that this version changes minimum required versions of:**
+
+* [WordPress](https://wordpress.org): 6.0+
+* [PHP](https://php.net/): 7.2+
+* [Contact Form 7](https://wordpress.org/plugins/contact-form-7/): 5.7+
+
+This release marks the (slow) resumption of this plugin development. If you want to know more about it check out [this blog post](https://felipeelia.dev/contact-form-7-repeatable-fields-2-0-0/). If you find this plugin useful, consider leaving it [a review](https://wordpress.org/support/plugin/cf7-repeatable-fields/reviews/#new-post).
+
+__Added:__
+
+* Support to [wp-env](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/).
+* `group_id` as a parameter to all filters.
+* Very basic unit testing.
+
+__Changed:__
+
+* Linting tools and script build process.
+* Docs were migrated to [GitHub wiki](https://github.com/felipeelia/cf7-repeatable-fields/wiki).
+
+__Fixed:__
+
+* Validation problem with Contact Form 5.7+. Props [@sfdeveloper](https://profiles.wordpress.org/sfdeveloper/).
+
+= 1.1.3 - 2019-12-11 =
 
 * Update WP `Tested up to` field
 * Apply WP Coding Standards
-* Fix a small sanitation problem
+* Fix a small sanitization problem
 
-= 1.1.2 =
+= 1.1.2 - 2019-10-10 =
 
 * Fix Exclusive Checkboxes
 
-= 1.1.1 =
+= 1.1.1 - 2019-09-04 =
 
 * Add compatibility to formatted dates (`[_format_{field name} "{date format}"]`)
 * DEV: Copy data and events while cloning a new group (JS)
 * DEV: Pass `$new_group` as an extra param for the `wpcf7-field-groups/added` event.
 * DEV: Apply some WPCS rules and add a CF7_REPEATABLE_FIELDS_VERSION const (may affect JS cache)
 
-= 1.1 =
+= 1.1 - 2018-06-14 =
 
 * Replace groups in mail 2 field
+
+= 1.0.2 - 2018/03/29 =
+
+* Fix repeated tags in mail body
+
+= 1.0.1 - 2018/03/20 =
+
+* Fix the `wpcf7_field_group_remove_button_atts` filter name. Props to @asilvestre87
+
+= 1.0.0 - 2018/03/19 =
+
+* Initial release
+
+== Upgrade Notice ==
+
+= 2.0.0 =
+This version changes the minimum requirements of the plugin: PHP 7.2+, WordPress 6.0+, and Contact Form 7 5.7+.

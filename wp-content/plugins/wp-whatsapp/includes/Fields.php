@@ -42,7 +42,7 @@ class Fields
         return wp_parse_args(
             get_option('nta_wa_widget_display', array()),
             array(
-                'displayCondition' => 'excludePages',
+                'displayCondition' => 'showAllPage',
                 'includePages' => [],
                 'excludePages' => [],
                 'includePosts' => [],

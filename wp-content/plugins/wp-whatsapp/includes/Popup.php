@@ -54,8 +54,23 @@ class Popup
         wp_enqueue_script('nta-js-global');
     }
 
+    private function shouldDisplayWidget(){
+        /**
+         * This code block prevents the display of the popup in Oxygen Builder.
+         */
+        if ( defined("SHOW_CT_BUILDER") && !defined("OXYGEN_IFRAME") ) {
+            return false;
+        }
+
+        return true;
+    }
+
     public function show_widget()
     {
+        if ( !$this->shouldDisplayWidget() ) {
+            return;
+        }
+
         $displayOption = Fields::getWidgetDisplay();
         $postId = get_the_ID();
         
@@ -105,6 +120,10 @@ class Popup
 				return false;
 			}
 		}
+
+        if( $option['displayCondition'] == 'showAllPage' ) {
+            return false;
+        }
 
         if ($option['displayCondition'] == 'includePages') {
             if (is_array($option['includePages']) && $isPageOrShop && in_array(strval($postId), $option['includePages'])) {

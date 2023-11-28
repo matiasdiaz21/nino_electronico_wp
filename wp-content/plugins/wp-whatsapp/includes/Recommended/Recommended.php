@@ -5,17 +5,17 @@ require_once ABSPATH . 'wp-admin/includes/plugin-install.php';
 if ( ! class_exists( 'YayRecommended' ) ) {
 	class YayRecommended {
 
-		public $pluginPrefix      = '';
-		public $subMenuSlug       = '';
-		public $recommendedPlugin = array();
+		public $plugin_prefix      = '';
+		public $sub_menu_slug      = '';
+		public $recommended_plugin = array();
 
-		public function __construct( $pluginPrefix ) {
-			$this->pluginPrefix      = $pluginPrefix;
-			$this->recommendedPlugin = $this->get_recommended_plugins();
-			$this->doHooks();
+		public function __construct( $plugin_prefix ) {
+			$this->plugin_prefix      = $plugin_prefix;
+			$this->recommended_plugin = $this->get_recommended_plugins();
+			$this->do_hooks();
 		}
 
-		public function doHooks() {
+		public function do_hooks() {
 			add_action(
 				'init',
 				function() {
@@ -29,7 +29,7 @@ if ( ! class_exists( 'YayRecommended' ) ) {
 		}
 
 		private function get_recommended_plugins() {
-			$recommendedPlugins = array(
+			$recommended_plugins = array(
 				'filebird'          => array(
 					'slug'              => 'filebird',
 					'name'              => 'FileBird - WordPress Media Library Folders & File Manager',
@@ -78,9 +78,9 @@ if ( ! class_exists( 'YayRecommended' ) ) {
 				'yaypricing'        => array(
 					'slug'              => 'yaypricing',
 					'name'              => 'YayPricing - WooCommerce Dynamic Pricing & Discounts',
-					'short_description' => 'Offer automatic pricing and discounts to design a powerful marketing strategy for your WooCommerce store.',
-					'icon'              => 'https://yaycommerce.com/wp-content/uploads/2022/11/yaypricing-256x256-1.png',
-					'download_link'     => 'https://yaycommerce.com/yaypricing-woocommerce-dynamic-pricing-and-discounts/',
+					'short_description' => 'Create WooCommerce Dynamic Pricing & Discounts rules without coding.',
+					'icon'              => 'https://ps.w.org/yaypricing/assets/icon-256x256.png?rev=2887976',
+					'download_link'     => 'https://downloads.wordpress.org/plugin/yaypricing.zip',
 					'type'              => array( 'woocommerce' ),
 					'version'           => 0,
 				),
@@ -148,27 +148,27 @@ if ( ! class_exists( 'YayRecommended' ) ) {
 					'version'           => 0,
 				),
 			);
-			return $recommendedPlugins;
+			return $recommended_plugins;
 		}
 
 		public function admin_menu() {
-			$this->subMenuSlug = add_submenu_page( 'nta_whatsapp', __( 'Recommended Plugins', 'filebird' ), __( 'Recommended Plugins', 'filebird' ), 'manage_options', 'nta_whatsapp_recommended_plugins', array( $this, 'recommended_plugins_view' ) );
+			$this->sub_menu_slug = add_submenu_page( 'nta_whatsapp', __( 'Recommended Plugins', 'filebird' ), __( 'Recommended Plugins', 'filebird' ), 'manage_options', 'nta_whatsapp_recommended_plugins', array( $this, 'recommended_plugins_view' ) );
 		}
 
 		public function recommended_plugins_view() {
 			if ( function_exists( 'WC' ) ) {
-				$featuredTab = '<li class="plugin-install-tab plugin-install-featured" data-tab="featured"><a href="#" >Featured</a> </li>';
-				$wooTab      = '<li class="plugin-install-tab plugin-install-woocommerce" data-tab="woocommerce"><a href="#" class="current" aria-current="page">WooCommerce</a> </li>';
+				$featured_tab = '<li class="plugin-install-tab plugin-install-featured" data-tab="featured"><a href="#" >Featured</a> </li>';
+				$woo_tab      = '<li class="plugin-install-tab plugin-install-woocommerce" data-tab="woocommerce"><a href="#" class="current" aria-current="page">WooCommerce</a> </li>';
 			} else {
-				$featuredTab = '<li class="plugin-install-tab plugin-install-featured" data-tab="featured"><a href="#" class="current" aria-current="page">Featured</a> </li>';
-				$wooTab      = '<li class="plugin-install-tab plugin-install-woocommerce" data-tab="woocommerce"><a href="#" >WooCommerce</a> </li>';
+				$featured_tab = '<li class="plugin-install-tab plugin-install-featured" data-tab="featured"><a href="#" class="current" aria-current="page">Featured</a> </li>';
+				$woo_tab      = '<li class="plugin-install-tab plugin-install-woocommerce" data-tab="woocommerce"><a href="#" >WooCommerce</a> </li>';
 			}
 			?>
 			<style>
 				.yay-recommended-plugins-layout {
 					margin-top: 20px;
 				}
-				.wrap .notice, .wrap .error {
+				.wrap .notice, .wrap .error, div.updated {
 					display: none !important;
 				}
 				.yay-recommended-plugins-layout-header {
@@ -245,11 +245,11 @@ if ( ! class_exists( 'YayRecommended' ) ) {
 							<h2 class="yay-recommended-plugins-header-title"><?php esc_attr_e( 'Recommended Plugins', 'filebird' ); ?></h2>
 							<ul class="filter-links">
 								<?php
-								 echo wp_kses_post( $featuredTab );
+								 echo wp_kses_post( $featured_tab );
 								?>
 								<li class="plugin-install-tab plugin-install-all" data-tab="all"><a href="#">All</a></li>
 								<?php
-								 echo wp_kses_post( $wooTab );
+								 echo wp_kses_post( $woo_tab );
 								?>
 								<li class="plugin-install-tab plugin-install-management" data-tab="management"><a href="#">Management</a> </li>
 								<li class="plugin-install-tab plugin-install-marketing" data-tab="marketing"><a href="#">Marketing</a></li>
@@ -266,24 +266,24 @@ if ( ! class_exists( 'YayRecommended' ) ) {
 
 		public function add_global_script_styles() {
 			$screen = get_current_screen();
-			if ( $screen->base !== $this->subMenuSlug ) {
+			if ( $screen->base !== $this->sub_menu_slug ) {
 				return;
 			}
-			$activeWC = function_exists( 'WC' );
+			$active_wc = function_exists( 'WC' );
 			wp_enqueue_script( 'plugin-install' );
 			wp_enqueue_script( 'thickbox' );
 			wp_enqueue_style( 'thickbox' );
-			wp_register_script( "{$this->pluginPrefix}-yayrecommended", plugin_dir_url( __FILE__ ) . '/assets/js/recommended.js', array( 'jquery' ), '1.0', true );
+			wp_register_script( "{$this->plugin_prefix}-yayrecommended", plugin_dir_url( __FILE__ ) . '/assets/js/recommended.js', array( 'jquery' ), '1.0', true );
 			wp_localize_script(
-				"{$this->pluginPrefix}-yayrecommended",
+				"{$this->plugin_prefix}-yayrecommended",
 				'yayRecommended',
 				array(
 					'nonce'      => wp_create_nonce( 'yay_recommended_nonce' ),
 					'admin_ajax' => admin_url( 'admin-ajax.php' ),
-					'woo_active' => $activeWC,
+					'woo_active' => $active_wc,
 				)
 			);
-			wp_enqueue_script( "{$this->pluginPrefix}-yayrecommended" );
+			wp_enqueue_script( "{$this->plugin_prefix}-yayrecommended" );
 		}
 
 		public function yay_recommended_get_plugin_data() {
@@ -293,12 +293,12 @@ if ( ! class_exists( 'YayRecommended' ) ) {
 					if ( ! wp_verify_nonce( $nonce, 'yay_recommended_nonce' ) ) {
 						wp_send_json_error( array( 'mess' => __( 'Nonce is invalid', 'filebird' ) ) );
 					}
-					$tab                = sanitize_text_field( $_POST['tab'] );
-					$recommendedPlugins = array();
-					$recommendedData    = apply_filters( 'yay_recommended_plugins_excluded', $this->recommendedPlugin );
-					foreach ( $recommendedData as $key => $plugin ) {
+					$tab                 = sanitize_text_field( $_POST['tab'] );
+					$recommended_plugins = array();
+					$recommended_data    = apply_filters( 'yay_recommended_plugins_excluded', $this->recommended_plugin );
+					foreach ( $recommended_data as $key => $plugin ) {
 						if ( in_array( $tab, $plugin['type'] ) || 'all' === $tab ) {
-							$recommendedPlugins[ $key ] = $plugin;
+							$recommended_plugins[ $key ] = $plugin;
 						}
 					}
 					ob_start();
@@ -402,7 +402,7 @@ if ( ! class_exists( 'YayRecommended' ) ) {
 								)
 							);
 						}
-						$args       = array(
+						$args        = array(
 							'slug'   => $upgrader->result['destination_name'],
 							'fields' => array(
 								'short_description' => true,
@@ -423,14 +423,14 @@ if ( ! class_exists( 'YayRecommended' ) ) {
 								'donate_link'       => false,
 							),
 						);
-						$pluginData = plugins_api( 'plugin_information', $args );
-						if ( $pluginData && ! is_wp_error( $pluginData ) ) {
-							$installStatus = install_plugin_install_status( $pluginData );
-							$activePlugin  = activate_plugin( $installStatus['file'] );
-							if ( is_wp_error( $activePlugin ) ) {
+						$plugin_data = plugins_api( 'plugin_information', $args );
+						if ( $plugin_data && ! is_wp_error( $plugin_data ) ) {
+							$install_status = install_plugin_install_status( $plugin_data );
+							$active_plugin  = activate_plugin( $install_status['file'] );
+							if ( is_wp_error( $active_plugin ) ) {
 								wp_send_json_error(
 									array(
-										'mess' => $activePlugin->get_error_message(),
+										'mess' => $active_plugin->get_error_message(),
 									)
 								);
 							} else {
@@ -488,48 +488,48 @@ if ( ! class_exists( 'YayRecommended' ) ) {
 			}
 		}
 
-		public function check_pro_version_exists( $pluginDetail ) {
-			$existProVer = false;
-			$allPlugin   = get_plugins();
-			if ( 'filebird' === $pluginDetail['slug'] ) {
-				$existProVer = array_key_exists( 'filebird-pro/filebird.php', $allPlugin ) === true ? 'filebird-pro/filebird.php' : false;
+		public function check_pro_version_exists( $plugin_detail ) {
+			$exist_pro_ver = false;
+			$all_plugin    = get_plugins();
+			if ( 'filebird' === $plugin_detail['slug'] ) {
+				$exist_pro_ver = array_key_exists( 'filebird-pro/filebird.php', $all_plugin ) === true ? 'filebird-pro/filebird.php' : false;
 			}
-			if ( 'yaymail' === $pluginDetail['slug'] ) {
-				if ( array_key_exists( 'yaymail-pro/yaymail.php', $allPlugin ) ) {
-					$existProVer = 'yaymail-pro/yaymail.php';
-				} elseif ( array_key_exists( 'email-customizer-for-woocommerce/yaymail.php', $allPlugin ) ) {
-					$existProVer = 'email-customizer-for-woocommerce/yaymail.php';
+			if ( 'yaymail' === $plugin_detail['slug'] ) {
+				if ( array_key_exists( 'yaymail-pro/yaymail.php', $all_plugin ) ) {
+					$exist_pro_ver = 'yaymail-pro/yaymail.php';
+				} elseif ( array_key_exists( 'email-customizer-for-woocommerce/yaymail.php', $all_plugin ) ) {
+					$exist_pro_ver = 'email-customizer-for-woocommerce/yaymail.php';
 				}
 			}
-			if ( 'yaycurrency' === $pluginDetail['slug'] ) {
-				if ( array_key_exists( 'yaycurrency-pro/yay-currency.php', $allPlugin ) ) {
-					$existProVer = 'yaycurrency-pro/yay-currency.php';
-				} elseif ( array_key_exists( 'multi-currency-switcher/yay-currency.php', $allPlugin ) ) {
-					$existProVer = 'multi-currency-switcher/yay-currency.php';
+			if ( 'yaycurrency' === $plugin_detail['slug'] ) {
+				if ( array_key_exists( 'yaycurrency-pro/yay-currency.php', $all_plugin ) ) {
+					$exist_pro_ver = 'yaycurrency-pro/yay-currency.php';
+				} elseif ( array_key_exists( 'multi-currency-switcher/yay-currency.php', $all_plugin ) ) {
+					$exist_pro_ver = 'multi-currency-switcher/yay-currency.php';
 				}
 			}
-			if ( 'yaysmtp' === $pluginDetail['slug'] ) {
-				$existProVer = array_key_exists( 'yaysmtp-pro/yay-smtp.php', $allPlugin ) === true ? 'yaysmtp-pro/yay-smtp.php' : false;
+			if ( 'yaysmtp' === $plugin_detail['slug'] ) {
+				$exist_pro_ver = array_key_exists( 'yaysmtp-pro/yay-smtp.php', $all_plugin ) === true ? 'yaysmtp-pro/yay-smtp.php' : false;
 			}
-			if ( 'yayswatches' === $pluginDetail['slug'] ) {
-				$existProVer = array_key_exists( 'yayswatches-pro/yay-swatches.php', $allPlugin ) === true ? 'yayswatches-pro/yay-swatches.php' : false;
+			if ( 'yayswatches' === $plugin_detail['slug'] ) {
+				$exist_pro_ver = array_key_exists( 'yayswatches-pro/yay-swatches.php', $all_plugin ) === true ? 'yayswatches-pro/yay-swatches.php' : false;
 			}
-			if ( 'yayextra' === $pluginDetail['slug'] ) {
-				$existProVer = array_key_exists( 'yayextra-pro/yayextra.php', $allPlugin ) === true ? 'yayextra-pro/yayextra.php' : false;
+			if ( 'yayextra' === $plugin_detail['slug'] ) {
+				$exist_pro_ver = array_key_exists( 'yayextra-pro/yayextra.php', $all_plugin ) === true ? 'yayextra-pro/yayextra.php' : false;
 			}
-			if ( 'yaypricing' === $pluginDetail['slug'] ) {
-				$existProVer = array_key_exists( 'yaypricing-pro/yaypricing.php', $allPlugin ) === true ? 'yaypricing-pro/yaypricing.php' : false;
+			if ( 'yaypricing' === $plugin_detail['slug'] ) {
+				$exist_pro_ver = array_key_exists( 'yaypricing-pro/yaypricing.php', $all_plugin ) === true ? 'yaypricing-pro/yaypricing.php' : false;
 			}
-			if ( 'cf7-multi-step' === $pluginDetail['slug'] ) {
-				$existProVer = array_key_exists( 'contact-form-7-multi-step-pro/contact-form-7-multi-step.php', $allPlugin ) === true ? 'contact-form-7-multi-step-pro/contact-form-7-multi-step.php' : false;
+			if ( 'cf7-multi-step' === $plugin_detail['slug'] ) {
+				$exist_pro_ver = array_key_exists( 'contact-form-7-multi-step-pro/contact-form-7-multi-step.php', $all_plugin ) === true ? 'contact-form-7-multi-step-pro/contact-form-7-multi-step.php' : false;
 			}
-			if ( 'cf7-database' === $pluginDetail['slug'] ) {
-				$existProVer = array_key_exists( 'contact-form-7-database-pro/cf7-database.php', $allPlugin ) === true ? 'contact-form-7-database-pro/cf7-database.php' : false;
+			if ( 'cf7-database' === $plugin_detail['slug'] ) {
+				$exist_pro_ver = array_key_exists( 'contact-form-7-database-pro/cf7-database.php', $all_plugin ) === true ? 'contact-form-7-database-pro/cf7-database.php' : false;
 			}
-			if ( 'wp-whatsapp' === $pluginDetail['slug'] ) {
-				$existProVer = array_key_exists( 'whatsapp-for-wordpress/whatsapp.php', $allPlugin ) === true ? 'whatsapp-for-wordpress/whatsapp.php' : false;
+			if ( 'wp-whatsapp' === $plugin_detail['slug'] ) {
+				$exist_pro_ver = array_key_exists( 'whatsapp-for-wordpress/whatsapp.php', $all_plugin ) === true ? 'whatsapp-for-wordpress/whatsapp.php' : false;
 			}
-			return $existProVer;
+			return $exist_pro_ver;
 		}
 	}
 }
@@ -537,8 +537,8 @@ if ( ! class_exists( 'YayRecommended' ) ) {
 if ( ! class_exists( 'NjtWhatsAppRecommended' ) ) {
 	class NjtWhatsAppRecommended extends YayRecommended {
 
-		public function __construct( $pluginPrefix ) {
-			parent::__construct( $pluginPrefix );
+		public function __construct( $plugin_prefix ) {
+			parent::__construct( $plugin_prefix );
 			add_filter( 'yay_recommended_plugins_excluded', array( $this, 'exclude_recommended_plugins' ), 10, 1 );
 		}
 
@@ -550,7 +550,7 @@ if ( ! class_exists( 'NjtWhatsAppRecommended' ) ) {
 		}
 
 		public function admin_menu() {
-			$this->subMenuSlug = add_submenu_page( 'nta_whatsapp', __( 'Recommended Plugins', 'ninjateam-whatsapp' ), __( 'Recommended Plugins', 'ninjateam-whatsapp' ), 'manage_options', 'nta_whatsapp_recommended_plugins', array( $this, 'recommended_plugins_view' ) );
+			$this->sub_menu_slug = add_submenu_page( 'nta_whatsapp', __( 'Recommended Plugins', 'ninjateam-whatsapp' ), __( 'Recommended Plugins', 'ninjateam-whatsapp' ), 'manage_options', 'nta_whatsapp_recommended_plugins', array( $this, 'recommended_plugins_view' ) );
 		}
 	}
 

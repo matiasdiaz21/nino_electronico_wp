@@ -113,7 +113,7 @@
 	};
 
 	/* MAP RENDER FUNCTION */
-	redux.field_objects.google_maps.renderMap = function( el, mapClass ) {
+	redux.field_objects.google_maps.renderMap = async function( el, mapClass ) {
 		var scrollWheel;
 		var streetView;
 		var mapType;
@@ -131,10 +131,13 @@
 		var autocomplete = containerID + '_autocomplete';
 		var canvas       = containerID + '_map_canvas';
 		var canvasId     = $( '#' + canvas );
+		var ac;
 
 		// Create the autocomplete object, restricting the search
 		// to geographical location types.
-		g_autoComplete = new google.maps.places.Autocomplete(
+		g_autoComplete = await google.maps.importLibrary( 'places' );
+
+		ac = new g_autoComplete.Autocomplete(
 			( document.getElementById( autocomplete ) ),
 			{
 				types: ['geocode']
@@ -517,7 +520,7 @@
 	redux.field_objects.google_maps.setupClickListener = function( id, types ) {
 		var radioButton = document.getElementById( id );
 
-		google.maps.event.addEventListener(
+		google.maps.event.addListener(
 			radioButton,
 			'click',
 			function() {

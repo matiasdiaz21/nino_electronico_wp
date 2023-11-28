@@ -5,10 +5,10 @@
  * Description: <code><strong>YITH WooCommerce Catalog Mode</strong></code> allows hiding product prices, cart and checkout from your store and turning it into a performing product catalogue. You will be able to adjust your catalogue settings as you prefer based on your requirements. <a href="https://yithemes.com/" target="_blank">Get more plugins for your e-commerce shop on <strong>YITH</strong></a>
  * Author: YITH
  * Text Domain: yith-woocommerce-catalog-mode
- * Version: 2.9.0
+ * Version: 2.28.0
  * Author URI: https://yithemes.com/
- * WC requires at least: 6.2.0
- * WC tested up to: 6.4.x
+ * WC requires at least: 8.1.0
+ * WC tested up to: 8.3.x
  *
  * @package YITH WooCommerce Catalog Mode
  */
@@ -26,7 +26,6 @@ if ( ! function_exists( 'is_plugin_active' ) ) {
  *
  * @return  void
  * @since   1.0.0
- * @author  Alberto Ruggiero <alberto.ruggiero@yithemes.com>
  */
 function ywctm_install_woocommerce_admin_notice() {
 	?>
@@ -34,7 +33,7 @@ function ywctm_install_woocommerce_admin_notice() {
 		<p>
 			<?php
 			/* translators: %s name of the plugin */
-			echo sprintf( esc_html__( '%s is enabled but not effective. In order to work, it requires WooCommerce.', 'yith-woocommerce-catalog-mode' ), 'YITH WooCommerce Catalog Mode' );
+			printf( esc_html__( '%s is enabled but not effective. In order to work, it requires WooCommerce.', 'yith-woocommerce-catalog-mode' ), 'YITH WooCommerce Catalog Mode' );
 			?>
 		</p>
 	</div>
@@ -46,7 +45,6 @@ function ywctm_install_woocommerce_admin_notice() {
  *
  * @return  void
  * @since   1.0.0
- * @author  Alberto Ruggiero <alberto.ruggiero@yithemes.com>
  */
 function ywctm_install_free_admin_notice() {
 	?>
@@ -54,14 +52,14 @@ function ywctm_install_free_admin_notice() {
 		<p>
 			<?php
 			/* translators: %s name of the plugin */
-			echo sprintf( esc_html__( 'You can\'t activate the free version of %s while you are using the premium one.', 'yith-woocommerce-catalog-mode' ), 'YITH WooCommerce Catalog Mode' );
+			printf( esc_html__( 'You can\'t activate the free version of %s while you are using the premium one.', 'yith-woocommerce-catalog-mode' ), 'YITH WooCommerce Catalog Mode' );
 			?>
 		</p>
 	</div>
 	<?php
 }
 
-! defined( 'YWCTM_VERSION' ) && define( 'YWCTM_VERSION', '2.9.0' );
+! defined( 'YWCTM_VERSION' ) && define( 'YWCTM_VERSION', '2.27.0' );
 ! defined( 'YWCTM_FREE_INIT' ) && define( 'YWCTM_FREE_INIT', plugin_basename( __FILE__ ) );
 ! defined( 'YWCTM_SLUG' ) && define( 'YWCTM_SLUG', 'yith-woocommerce-catalog-mode' );
 ! defined( 'YWCTM_FILE' ) && define( 'YWCTM_FILE', __FILE__ );
@@ -82,7 +80,6 @@ yit_maybe_plugin_fw_loader( YWCTM_DIR );
  *
  * @return  void
  * @since   1.0.0
- * @author  Alberto Ruggiero <alberto.ruggiero@yithemes.com>
  */
 function ywctm_init() {
 
@@ -99,7 +96,6 @@ add_action( 'ywctm_init', 'ywctm_init' );
  *
  * @return void
  * @since   1.0.0
- * @author  Alberto Ruggiero <alberto.ruggiero@yithemes.com>
  */
 function ywctm_install() {
 
@@ -131,7 +127,6 @@ if ( ! function_exists( 'YITH_WCTM' ) ) {
 	 *
 	 * @return  YITH_WooCommerce_Catalog_Mode
 	 * @since   1.1.5
-	 * @author  Alberto Ruggiero <alberto.ruggiero@yithemes.com>
 	 */
 	function YITH_WCTM() { //phpcs:ignore WordPress.NamingConventions.ValidFunctionName.FunctionNameInvalid
 
@@ -139,6 +134,19 @@ if ( ! function_exists( 'YITH_WCTM' ) ) {
 		require_once YWCTM_DIR . 'class-yith-woocommerce-catalog-mode.php';
 
 		return YITH_WooCommerce_Catalog_Mode::get_instance();
+	}
+}
 
+add_action( 'before_woocommerce_init', 'ywctm_free_declare_hpos_compatibility' );
+
+/**
+ * Declare HPOS compatibility
+ *
+ * @return void
+ * @since  2.17.0
+ */
+function ywctm_free_declare_hpos_compatibility() {
+	if ( class_exists( '\Automattic\WooCommerce\Utilities\FeaturesUtil' ) ) {
+		\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', __FILE__, true );
 	}
 }

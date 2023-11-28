@@ -1,9 +1,10 @@
 === WP Chat App ===
 Contributors: ninjateam
+Donate link: https://codecanyon.net/item/whatsapp-chat-wordpress/22800580
 Tags: whatsapp, whatsapp chat, woocommerce whatsapp, click to chat, whatsapp business, whats app, wame, wp social chat, join chat, wp whatsapp
 Requires at least: 3.0
-Tested up to: 6.1
-Stable tag: 3.3.3
+Tested up to: 6.3.1
+Stable tag: 3.4.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -131,6 +132,29 @@ Definitely yes! The pro version comes with cutting edge features and performance
 3. WhatsApp Gutenberg Block Demo
 
 == Changelog ==
+
+= Sep 11, 2023 – Version 3.4.6 =
+- Fixed: jQuery warning
+- Fixed: Prevent display WhatsApp widget in Oxygen Builder admin dashboard
+
+= Sep 5, 2023 – Version 3.4.5 =
+- Fixed: XSS vulnerability
+
+= Aug 9, 2023 – Version 3.4.4 =
+- Fixed: Conflict jquery-ui-tabs
+
+= Jun 14, 2023 – Version 3.4.3 =
+- Improved: Display on Posts (Show on all posts, Show on these posts, Hide on these posts) (PRO)
+
+= Jun 7, 2023 - Version 3.4.2 =
+- Improved: UI Text 
+
+= Jun 2, 2023 - Version 3.4.1 =
+- Fixed: Compatible with WooCommerce Products Sold Counter plugin (KoalaApps)
+- Fixed: PHP Warning
+
+= Apr 19, 2023 - Version 3.4 =
+- Improved: Options Display of Floating Widget 
 
 = Feb 15, 2023 – Version 3.3.3 =
 - Fixed: Cache GDPR

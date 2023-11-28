@@ -9,7 +9,7 @@ if (isset($_GET['tab'])) {
     <h1>Floating Widget</h1>
 
     <?php settings_errors(); ?>
-    <div id="tabs">
+    <div id="njt-tabs">
         <ul class="nav-tab-wrapper nta-tab-wrapper">
             <li><a href="#tabs-1" class="nav-tab nta-selected-tab"><?php echo __('Selected Accounts', 'ninjateam-whatsapp') ?></a></li>
             <li><a href="#tabs-2" class="nav-tab nta-design-tab" data-action="njt_wa_save_design_setting"><?php echo __('Design', 'ninjateam-whatsapp') ?></a></li>

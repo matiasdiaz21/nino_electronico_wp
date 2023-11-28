@@ -66,18 +66,14 @@ class MailChimp_WooCommerce_Transform_Products {
 	}
 
 	/**
-	 * @param WP_Post $post
+	 * @param $woo
 	 * @param null    $fallback_title
 	 *
 	 * @return MailChimp_WooCommerce_Product
 	 * @throws Exception
 	 */
-	public function transform( WP_Post $post, $fallback_title = null ) {
-		if ( ! ( $woo = wc_get_product( $post ) ) ) {
-			return $this->wooProductNotLoadedCorrectly( $post, $fallback_title );
-		}
-
-		$variant_posts = $this->getProductVariantPosts( $post->ID );
+	public function transform( $woo, $fallback_title = null ) {
+		$variant_posts = $this->getProductVariantPosts( $woo->get_id() );
 
 		$variants = $variant_posts ? array_merge( array( $woo ), $variant_posts ) : array( $woo );
 
@@ -85,13 +81,19 @@ class MailChimp_WooCommerce_Transform_Products {
 
 		$product = new MailChimp_WooCommerce_Product();
 
+		if ( class_exists( 'SitePress' ) && function_exists( 'wpml_switch_language_action' ) ) {
+			$get_language_args  = array( 'element_id' => $woo->get_id(), 'element_type' => 'product' );
+			$post_language_info = apply_filters( 'wpml_element_language_details', null, $get_language_args );
+			wpml_switch_language_action( $post_language_info->language_code );
+		}
+
 		$product->setId( $woo->get_id() );
-		$product->setHandle( $post->post_name );
-		$product->setImageUrl( $this->getProductImage( $post ) );
-		$product->setDescription( $post->post_content );
-		$product->setPublishedAtForeign( mailchimp_date_utc( $post->post_date ) );
+		$product->setHandle( urldecode($woo->get_slug() ) );
+		$product->setImageUrl( $this->getProductImage( $woo ) );
+		$product->setDescription( $woo->get_description() );
+		$product->setPublishedAtForeign( mailchimp_date_utc( $woo->get_date_created() ) );
 		$product->setTitle( $woo->get_title() );
-		$product->setUrl( $woo->get_permalink() );
+		$product->setUrl( urldecode( $woo->get_permalink() ) );
 
 		$original_vendor = '';
 		if ( in_array( 'woocommerce-product-vendors/woocommerce-product-vendors.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) || defined( 'WC_PRODUCT_VENDORS_VERSION' ) ) {
@@ -157,7 +159,7 @@ class MailChimp_WooCommerce_Transform_Products {
 		}
 
 		$variant->setId( $woo->get_id() );
-		$variant->setUrl( $woo->get_permalink() );
+		$variant->setUrl( urldecode( $woo->get_permalink() ) );
 		$variant->setImageUrl( $this->getProductImage( $post ) );
 		$variant->setPrice( $woo->get_price() );
 		$variant->setSku( $woo->get_sku() );
